@@ -1,0 +1,7 @@
+npm install --global --production windows-build-tools
+
+https://www.python.org/downloads/release/python-2716/
+
+
+//RUN This command in Windows
+npm --add-python-to-path='true' --debug install --global windows-build-tools
