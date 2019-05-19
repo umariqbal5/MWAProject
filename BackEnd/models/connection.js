@@ -10,7 +10,7 @@ const termination = chalk.bold.magenta;
 
 //const accessLogStream = fs.createWriteStream(__dirname + '/access.log', { flags: 'a' });
 
-modelu.exports = function() {
+module.exports = function() {
 
     mongoose.connect(db_url.url);
 
