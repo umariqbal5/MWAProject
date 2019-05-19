@@ -11,6 +11,7 @@ const cors = require('cors');
  */
 const packageRout = require('./routes/package/packageRoute');
 const userRoute = require('./routes/user/userRoute');
+const bookingRoute = require('./routes/booking/bookingRoute');
 const db_url = require('./models/db_url');
 const authRoute = require('./routes/auth/authRoutes');
 
@@ -44,5 +45,6 @@ connection.once('open',()=>{
 app.use('/auth', authRoute);
 app.use('/users', userRoute);
 app.use('/package', packageRout);
+app.use('', bookingRoute);
 
 app.listen(port, ()=>console.log("listening to :  http://localhost:" + port));
