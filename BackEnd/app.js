@@ -15,7 +15,7 @@ const db_url = require('./models/db_url');
 /**
  * create a write stream (in append mode)
  */
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'REQUEST_LOG.log'), { flags: 'a'});
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'SERVER_LOG.log'), { flags: 'a'});
 
 const app = express();
 const port = 4000;
