@@ -2,15 +2,17 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const packageSchema = new Schema({
+let packageSchema = new Schema({
     package: {
         name: String ,
-        description: String
+        package_type: String,
+        description: String,
+        image_url: String
     },
     destination: Array,
     hotel: String,
     price: Number
 
-});
+}, {collection: 'package'});
 
-export default mongoose.model('package', packageSchema);
+module.exports = mongoose.model('pkg', packageSchema);
