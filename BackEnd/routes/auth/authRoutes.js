@@ -2,6 +2,7 @@ const User =  require("../../models/users/User");
 
 const express = require('express');
 const router = express.Router();
+const db_url = require('../../models/db_url');
 //JWT Token Libs
 const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
@@ -12,17 +13,19 @@ router.post('/login',(req,res)=>{
         if (err) throw err;
 
         if (user && user.password == req.body.password){
-                var token = jwt.sign({userID: user._id}, 'specialsecret', {expiresIn: '12h'});
+                var token = jwt.sign(
+                    {
+                        userID: user._id
+                    }
+                    , db_url.secrete, {expiresIn: '12h'});
                 res.json({
                     success: 1,
                     msg: 'login success',
                     token: token,
                     user: {
-                        username: user.username,
-                        name: user.first_name +" "+ user.last_name,
-                        email: user.email,
-                        phone_number: user.phone_number,
-                        address: user.address
+                        "username": user.username,
+                        "name": user.first_name +" "+ user.last_name,
+                        "email": user.email,
                     }
                 });
             } else{

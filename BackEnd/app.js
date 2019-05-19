@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
+const expressJwt = require('express-jwt');
 
 /**
  * routes
@@ -29,7 +30,7 @@ const port = 4000;
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(bodyParser.json());
 app.use(cors());
-
+app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/auth/login','/auth/register']}));
 
 //========================connection=================
 
