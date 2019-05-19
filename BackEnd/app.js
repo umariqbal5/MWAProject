@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 /**
  * routes
@@ -11,6 +12,7 @@ const path = require('path');
 const packageRout = require('./routes/package/packageRoute');
 const userRoute = require('./routes/user/userRoute');
 const db_url = require('./models/db_url');
+const authRoute = require('./routes/auth/authRoutes');
 
 /**
  * create a write stream (in append mode)
@@ -25,7 +27,7 @@ const port = 4000;
  */
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(bodyParser.json());
-
+app.use(cors());
 
 
 //========================connection=================
@@ -39,8 +41,8 @@ connection.once('open',()=>{
 });
 //================================================
 
-
+app.use('/auth', authRoute);
 app.use('/users', userRoute);
 app.use('/package', packageRout);
 
-app.listen(port, ()=>console.log("listening to : " + port));
+app.listen(port, ()=>console.log("listening to :  http://localhost:" + port));
