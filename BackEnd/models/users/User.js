@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const shortid = require('shortid');
-
 const Schema = mongoose.Schema;
 
 let User = new Schema({
@@ -17,10 +16,13 @@ let User = new Schema({
         type: String
     },
     username: {
-        type: String
+        type: String,
+        required: true,
+        index: { unique: true }
     },
     password: {
-        type: String
+        type: String,
+        required: true
     },
     address: {
         state: {type: String},
