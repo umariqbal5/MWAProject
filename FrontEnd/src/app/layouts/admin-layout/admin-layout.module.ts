@@ -12,6 +12,7 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {UserListComponent}from '../../pages/UserList/UserList.component';
 import {CreateUserComponent} from '../../pages/CreateUser/CreateUser.component';
+import { BookingsComponent } from 'src/app/pages/bookings/bookings.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -26,10 +27,11 @@ import {CreateUserComponent} from '../../pages/CreateUser/CreateUser.component';
   ],
   declarations: [
     DashboardComponent,
-    UserProfileComponent,
+    // UserProfileComponent,
     TablesComponent,
     UserListComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    BookingsComponent
   ]
 })
 
