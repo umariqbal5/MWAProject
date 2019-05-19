@@ -16,7 +16,8 @@
     "express": "^4.17.0",
     "mongoose": "^5.5.9",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
