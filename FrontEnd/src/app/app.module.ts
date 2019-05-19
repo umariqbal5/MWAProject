@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+//import {UserListComponent} from './pages/UserList/UserList.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { ComponentsModule } from './components/components.module';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    //UserListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
