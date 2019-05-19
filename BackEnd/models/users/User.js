@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const Schema=mongoose.Schema;
 
 let User = new Schema({
@@ -15,11 +14,14 @@ let User = new Schema({
     phone_number:{
         type:String
     },
-    username:{
-        type:String
-    },
-    password:{
-        type:String
+    username: {
+        type: String,
+        required: true,
+        index: { unique: true }
+        },
+    password: {
+        type: String,
+        required: true
     },
     address:{
         state : {type:String},
