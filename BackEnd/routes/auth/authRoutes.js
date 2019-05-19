@@ -19,7 +19,7 @@ router.post('/login',(req,res)=>{
                     token: token,
                     user: {
                         username: user.username,
-                        name: user.first_name + user.last_name,
+                        name: user.first_name +" "+ user.last_name,
                         email: user.email,
                         phone_number: user.phone_number,
                         address: user.address
