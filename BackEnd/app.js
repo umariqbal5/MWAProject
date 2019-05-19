@@ -1,15 +1,14 @@
-//let userRoute = require('./routes/user/userRoute.js');
 
-// import express from 'express';
-// import cors from 'cors';
-// import bodyParser from 'body-parser';
-// import mongoose from 'mongoose';
-//import User from './models/users/User';
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
+/**
+ * routes
+ */
 const packageRout = require('./routes/package/packageRoute');
+const userRoute = require('./routes/user/userRoute');
 const db_url = require('./models/db_url');
 
 const app = express();
@@ -31,8 +30,7 @@ connection.once('open',()=>{
 //================================================
 
 
-//app.use('/users', userRoute);
-
+app.use('/users', userRoute);
 app.use('/package', packageRout);
 
 app.listen(port, ()=>console.log("listening to : " + port));
