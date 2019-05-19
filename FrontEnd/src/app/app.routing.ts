@@ -5,12 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import {UserComponent} from './layouts/user-layout/user.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full',
   }, {
     path: '',
@@ -31,17 +30,8 @@ const routes: Routes = [
       }
     ]
   }, {
-    path: '',
-    component: UserComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './layouts/user-layout/user.module#UserModule'
-      }
-    ]
-  }, {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'home'
   }
 ];
 
