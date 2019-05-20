@@ -20,6 +20,7 @@ import {UserProfileComponent} from '../../pages/user-profile/user-profile.compon
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    UserProfileComponent
   ]
 })
 export class AuthLayoutModule { }

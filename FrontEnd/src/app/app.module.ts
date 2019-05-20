@@ -14,6 +14,15 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import {BookingService} from './services/booking.service';
 
+import {JwtModule} from '@auth0/angular-jwt';
+import {AuthGuard} from './gaurds/auth.guard';
+import {AuthService} from './services/auth.service';
+
+
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -23,14 +32,25 @@ import {BookingService} from './services/booking.service';
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ["localhost:4000","127.0.0.1:4000"],
+        blacklistedRoutes: ["localhost:4000/auth/login","localhost:4000/auth/register"]
+      }
+    })
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent
   ],
-  providers: [BookingService],
+  providers: [
+    AuthService,
+    AuthGuard,
+    BookingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

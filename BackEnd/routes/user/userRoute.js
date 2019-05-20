@@ -5,6 +5,7 @@ const User = require('../../models/users/User');
 const router = express.Router();
 
 router.route('/').get((req,res)=>{
+    console.log(req.body)
     User.find((err,users)=>{
         if(err)
             console.log(err);
