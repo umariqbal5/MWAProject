@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {BookingService} from '../../../services/booking.service';
 
 @Component({
-  selector: 'app-view-booking',
+  selector: 'app-booking-details',
   templateUrl: './booking-details.component.html',
   styleUrls: ['./booking-details.component.scss']
 })

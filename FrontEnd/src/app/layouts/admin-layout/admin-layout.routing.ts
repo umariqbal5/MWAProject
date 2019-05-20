@@ -6,7 +6,6 @@ import {TablesComponent} from '../../pages/tables/tables.component';
 import {UserListComponent} from '../../pages/UserList/UserList.component';
 import {CreateUserComponent} from '../../pages/CreateUser/CreateUser.component';
 import {AuthGuard} from '../../gaurds/auth.guard';
-import {BookingsComponent} from 'src/app/pages/bookings/bookings.component';
 import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-bookings/admin-view-bookings.component';
 
 export const AdminLayoutRoutes: Routes = [
@@ -15,7 +14,6 @@ export const AdminLayoutRoutes: Routes = [
   {path: 'tables', component: TablesComponent},
   {path: 'UserList', component: UserListComponent},
   {path: 'CreateUser', component: CreateUserComponent},
-  {path: 'bookings', component: BookingsComponent},
-  {path: 'viewBookings', component: AdminViewBookingsComponent}
+  {path: 'view-bookings', component: AdminViewBookingsComponent}
 
 ];

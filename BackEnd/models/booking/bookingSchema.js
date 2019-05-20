@@ -27,7 +27,6 @@ let bookingSchema = new Schema({
         default: 'NEW'
     },
     startDate: Date,
-    endDate: Date,
     totalPrice: Schema.Types.Decimal128
 });
 

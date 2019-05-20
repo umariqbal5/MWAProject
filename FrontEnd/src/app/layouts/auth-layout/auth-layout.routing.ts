@@ -13,5 +13,5 @@ export const AuthLayoutRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'booking-details', component: BookingDetailsComponent},
-  {path: 'view-bookings', component: AuthViewBookingsComponent}
+  {path: 'view-bookings', component: AuthViewBookingsComponent},
 ];

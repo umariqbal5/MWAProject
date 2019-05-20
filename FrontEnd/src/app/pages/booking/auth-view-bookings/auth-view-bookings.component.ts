@@ -13,12 +13,41 @@ export class AuthViewBookingsComponent implements OnInit {
 
   bookingList: any = [];
   ngOnInit() {
-    const userString = localStorage.getItem('user');
-    const user: any = JSON.parse(userString);
-    this.bookingService.getAllBookingsByUser(user.username).subscribe(data => {
+    // Get auth user
+    this.bookingService.getAllBookingsByUser().subscribe(data => {
       this.bookingList = data;
-      console.log(this.bookingList);
-    } );
+      console.log('getAllBookingsByUser: ', this.bookingList);
+    });
+
+
+    // Create a booking
+    // const newBooking = {
+    //   'no_adult': 3,
+    //   'no_child': 0,
+    //   'startDate': 1565154000000,
+    //   'endDate': 1565845200000,
+    //   'totalPrice': 1111
+    // };
+    //
+    // this.bookingService.insertBooking(newBooking).subscribe(result => {
+    //   console.log('insertBooking: ', result);
+    // });
+
+
+    // Get auth user
+    // this.bookingService.getBookingByBookingRef('etYXuy-AI').subscribe(data => {
+    //   console.log('getBookingByBookingRef: ', data);
+    // });
+
+    // Cancel booking
+    // this.bookingService.cancelBooking('etYXuy-AI').subscribe(data => {
+    //   console.log('cancelBooking: ', data);
+    // });
+
+    // Delete booking
+    // this.bookingService.deleteBooking('vJbEFPRYJ').subscribe(data => {
+    //   console.log('deleteBooking: ', data);
+    // });
   }
 
 }

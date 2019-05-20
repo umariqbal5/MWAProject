@@ -15,4 +15,11 @@ export class AdminViewBookingsComponent implements OnInit {
     this.bookingService.getAllBookings().subscribe(data => this.bookingList = data );
   }
 
+  cancelBooking() {
+    // this.bookingService.cancelBooking();
+  }
+
+  deleteBooking() {
+    // this.bookingService.deleteBooking();
+  }
 }
