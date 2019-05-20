@@ -9,8 +9,8 @@ import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
 import {HomeComponent} from '../../pages/home/home.component';
 import {UserProfileComponent} from '../../pages/user-profile/user-profile.component';
-import { PackageDetailComponent } from '../../pages/packageDetail/packageDetail.component';
-
+import {BookingDetailsComponent} from '../../pages/booking/booking-details/booking-details.component';
+import {AuthViewBookingsComponent} from '../../pages/booking/auth-view-bookings/auth-view-bookings.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +23,8 @@ import { PackageDetailComponent } from '../../pages/packageDetail/packageDetail.
     RegisterComponent,
     HomeComponent,
     UserProfileComponent,
-    PackageDetailComponent
+    BookingDetailsComponent,
+    AuthViewBookingsComponent
   ]
 })
 export class AuthLayoutModule { }
