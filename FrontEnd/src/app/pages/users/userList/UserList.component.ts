@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {Router}from '@angular/router';
-import {UserService} from '../../services/user.service';
-import {User} from '../../user.model';
+import {Router} from '@angular/router';
+import {UserService} from '../../../services/user.service';
+import {User} from '../../../models/user.model';
+
 @Component({
   selector: 'app-tables',
-  templateUrl: './UserList.component.html',
-  styleUrls: ['./UserList.component.scss']
+  templateUrl: './userList.component.html',
+  styleUrls: ['./userList.component.scss']
 })
 export class UserListComponent implements OnInit {
 
@@ -26,8 +27,8 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  editUser(id){
-    this.router.navigate([`/update/${id}`]);
+  editUser(id) {
+    this.router.navigate([`/editUser/`+id]);
   }
 
   deleteUser(id){

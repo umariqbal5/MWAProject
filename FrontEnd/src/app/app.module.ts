@@ -16,6 +16,8 @@ import { ComponentsModule } from './components/components.module';
 import {JwtModule} from '@auth0/angular-jwt';
 import {AuthGuard} from './gaurds/auth.guard';
 import {AuthService} from './services/auth.service';
+// import { SearchPipe } from './search.pipe';
+// import { SortPipe } from './pipes/sort.pipe';
 
 
 export function tokenGetter() {
@@ -43,7 +45,9 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent,
+    AuthLayoutComponent
+    // SearchPipe,
+    // SortPipe,
     //UserListComponent
   ],
   providers: [
