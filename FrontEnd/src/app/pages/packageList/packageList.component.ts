@@ -14,7 +14,6 @@ export class PackageListComponent implements OnInit {
   constructor(private packageService:PackageService, private router:Router) { }
 
   ngOnInit() {
-    //this.packageService.getPackages().subscribe((users)=>console.log(users));
     this.fetchPackages();
   }
   fetchPackages() {
