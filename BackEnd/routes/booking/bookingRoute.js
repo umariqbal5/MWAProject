@@ -6,7 +6,7 @@ const router = express.Router();
 const shortid = require('shortid');
 
 // find all bookings for all users
-router.get('/api/bookings', async (req, res) => {
+router.get('/api/all-bookings', async (req, res) => {
     try {
         let result = await BookingInfo.find();
         res.status(200).json({success: 1, msg:'', data: result});
@@ -16,12 +16,12 @@ router.get('/api/bookings', async (req, res) => {
 });
 
 // find all bookings for a user
-router.get('/api/bookings/:userID', async (req, res) => {
+router.get('/api/user-bookings', async (req, res) => {
     try {
         console.log('headers', req.headers);
-        console.log('userID',req.user);
-        // console.log('userID ', req.params.userID);
-        let result = await BookingInfo.find({'user': req.body.userID});
+        // let userId = req.headers.userID.userID;
+        let userId = '5ce2b138274d0e8da9407320';
+        let result = await BookingInfo.find({'user._id': userId});
         res.status(200).json({success: 1, msg:'', data: result});
     } catch (e) {
         res.status(400).send(e);
@@ -42,8 +42,13 @@ router.get('/api/booking/:pnr', async (req, res) => {
 // insert a new booking
 router.post('/api/booking', async (req, res) => {
     try {
-        let bookingInfo = new BookingInfo(req.body);
-        console.log('headers',req.headers);
+        console.log('req.headers: ', req.headers);
+        // let userId = req.headers.userID.userID;
+        let userId = '5ce2b138274d0e8da9407320';
+        let user = await User.findById(userId);
+        let booking = req.body;
+        booking.user = user;
+        let bookingInfo = new BookingInfo(booking);
 
         let result = await bookingInfo.save();
         res.status(200).json({success: 1, msg:'', data: result});
@@ -59,7 +64,7 @@ async function updateBookingStatus(bookingRef, newStatus) {
 }
 
 // update/cancel a booking
-router.patch('/api/booking/:pnr', async (req, res) => {
+router.get('/api/booking/cancel/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await updateBookingStatus(pnr, 'CANCELLED');
@@ -70,7 +75,7 @@ router.patch('/api/booking/:pnr', async (req, res) => {
 })
 
 //delete a booking
-router.delete('/api/booking/:pnr', async (req, res) => {
+router.get('/api/booking/delete/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await updateBookingStatus(pnr, 'DELETED');
