@@ -8,11 +8,11 @@ let bookingSchema = new Schema({
         default: shortid.generate
     } ,
     package: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.Object,
         ref: 'pkg'
     },
-    customer: {
-        type: Schema.Types.ObjectId,
+    user: {
+        type: Schema.Types.Object,
         ref: 'User'
     },
     travelers: [{
@@ -31,4 +31,4 @@ let bookingSchema = new Schema({
     totalPrice: Schema.Types.Decimal128
 });
 
-module.exports = mongoose.model('BookingInfo', bookingSchema);
+module.exports = mongoose.model('BookingInfo', bookingSchema, 'bookingInfo');

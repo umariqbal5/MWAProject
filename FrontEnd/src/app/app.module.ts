@@ -36,15 +36,15 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ["localhost:4000","127.0.0.1:4000"],
-        blacklistedRoutes: ["localhost:4000/auth/login","localhost:4000/auth/register"]
+        whitelistedDomains: ['localhost:4000','127.0.0.1:4000'],
+        blacklistedRoutes: ['localhost:4000/auth/login','localhost:4000/auth/register']
       }
     })
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
   ],
   providers: [
     AuthService,
