@@ -8,12 +8,15 @@ import { CreateUserComponent} from '../../pages/users/createUser/CreateUser.comp
 import {AuthGuard} from '../../gaurds/auth.guard';
 import { BookingsComponent } from 'src/app/pages/bookings/bookings.component';
 import{ EditUserComponent} from '../../pages/users/editUser/editUser.component';
+import { PackageListComponent } from '../../pages/packageList/packageList.component';
+
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'editUser/:id',   component: EditUserComponent, canActivate: [AuthGuard]  },
     { path: 'tables',         component: TablesComponent },
     { path: 'userList',         component: UserListComponent, canActivate: [AuthGuard]  },
     { path: 'createUser', component: CreateUserComponent, canActivate: [AuthGuard] },
-    { path: 'bookings', component: BookingsComponent}
+    { path: 'bookings', component: BookingsComponent},
+    { path: 'packages', component: PackageListComponent}
 
 ];

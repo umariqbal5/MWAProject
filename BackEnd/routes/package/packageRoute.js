@@ -160,7 +160,7 @@ router.put('/update/id/:id', ( req, res ) => {
 
 
 router.delete('/delete/id/:id', ( req, res ) => {
-
+console.log('inside delete');
     package.deleteOne({_id: req.params.id}, (err)=>{
         if(err){
             res.status(500).json({

@@ -45,7 +45,7 @@ connection.once('open',()=>{
 
 app.use('/auth', authRoute);
 app.use('/users', userRoute);
-app.use('/package', packageRout);
+app.use('/api/package', packageRout);
 app.use('', bookingRoute);
 
 app.listen(port, ()=>console.log("listening to :  http://localhost:" + port));
