@@ -32,6 +32,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/api/auth/login','/api/auth/register']}));
 
+
 //========================connection=================
 
 
