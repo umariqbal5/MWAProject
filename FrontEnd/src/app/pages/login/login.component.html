@@ -1,4 +1,6 @@
-<div class="header bg-gradient-danger py-7 py-lg-8">
+<div class="header  py-7 py-lg-8" style="background-image: url(assets/img/login-image.jpg); background-size: cover;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-2"></span>
   <div class="container">
     <div class="header-body text-center mb-7">
       <div class="row justify-content-center">
@@ -26,13 +28,13 @@
             <h4 *ngIf="error">{{error}}</h4>
             <small>sign in with credentials</small>
           </div>
-          <form role="form" (ngSubmit)="submit()">
+          <form role="form" (ngSubmit)="submit()" #f="ngForm">
             <div class="form-group mb-3">
               <div class="input-group input-group-alternative">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                 </div>
-                <input class="form-control" placeholder="Username" type="text" [(ngModel)]="user" name="user">
+                <input required class="form-control" placeholder="Username" type="text" [(ngModel)]="user" name="user">
               </div>
             </div>
             <div class="form-group">
@@ -40,29 +42,30 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                 </div>
-                <input class="form-control" placeholder="Password" type="password" [(ngModel)]="pass" name="pass">
+                <input required class="form-control" placeholder="Password" type="password" [(ngModel)]="pass" name="pass">
               </div>
             </div>
-            <div class="custom-control custom-control-alternative custom-checkbox">
-              <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-              <label class="custom-control-label" for=" customCheckLogin">
-                <span class="text-muted">Remember me</span>
-              </label>
-            </div>
+<!--            <div class="custom-control custom-control-alternative custom-checkbox">-->
+<!--              <input class="custom-control-input" id=" customCheckLogin" type="checkbox">-->
+<!--              <label class="custom-control-label" for=" customCheckLogin">-->
+<!--                <span class="text-muted">Remember me</span>-->
+<!--              </label>-->
+<!--            </div>-->
             <div class="text-center">
-              <button type="submit" class="btn btn-primary my-4">Sign in</button>
+              <button type="submit" class="btn btn-primary my-4" [disabled]="!f.valid">Sign in</button>
             </div>
           </form>
         </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-6">
-          <a href="javascript:void(0)" class="text-light"><small>Forgot password?</small></a>
-        </div>
-        <div class="col-6 text-right">
-          <a href="javascript:void(0)" class="text-light"><small>Create new account</small></a>
         </div>
       </div>
+<!--      <div class="row mt-3">-->
+<!--        <div class="col-6">-->
+<!--          <a href="javascript:void(0)" class="text-light"><small>Forgot password?</small></a>-->
+<!--        </div>-->
+<!--        <div class="col-6 text-right">-->
+<!--          <a href="javascript:void(0)" class="text-light"><small>Create new account</small></a>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
 </div>

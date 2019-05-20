@@ -5,7 +5,7 @@ const User = require('../../models/users/User');
 const router = express.Router();
 
 router.route('/').get((req,res)=>{
-
+    console.log(req.user)
     User.find((err,users)=>{
         if(err)
             console.log(err);
@@ -26,7 +26,6 @@ router.route('/:id').get((req,res)=>{
 });
 
 router.route('/add').post((req,res)=>{
-    console.log(req.user)
     let user = new User(req.body);
     // user.save()
     //     .then(user=>{
