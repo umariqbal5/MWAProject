@@ -15,6 +15,7 @@ import {CreateUserComponent} from '../../pages/CreateUser/CreateUser.component';
 import { BookingsComponent } from 'src/app/pages/bookings/bookings.component';
 // import { ToastrModule } from 'ngx-toastr';
 import { PackageListComponent } from '../../pages/packageList/packageList.component';
+import { CreatePackageComponent } from '../../pages/createPackage/createPackage.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { PackageListComponent } from '../../pages/packageList/packageList.compon
     UserListComponent,
     CreateUserComponent,
     BookingsComponent,
-    PackageListComponent
+    PackageListComponent,
+    CreatePackageComponent
   ]
 })
 
