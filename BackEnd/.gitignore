@@ -1,3 +1,4 @@
 node_modules/
 .idea/
 models/db_url.js
+SERVER_LOG.log
