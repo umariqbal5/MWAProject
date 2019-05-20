@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 declare interface RouteInfo {
-    path: string;
-    title: string;
-    icon: string;
-    class: string;
+  path: string;
+  title: string;
+  icon: string;
+  class: string;
 }
+
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '' },
-    // { path: '/user-profile', title: 'User profile',  icon:'ni-single-02 text-yellow', class: '' },
-    { path: '/userList', title: 'Users',  icon:'ni-bullet-list-67 text-red', class: '' },
-    { path: '/createUser', title: 'New User', icon:'ni-single-02 text-yellow', class: '' },
-    { path: '/bookings', title: 'Bookings', icon:'ni-bullet-list-67 text-yellow', class: '' },
-    { path: '/packages', title: 'Packages', icon:'ni-bullet-list-67 text-red', class: ''}
-  ];
+  {path: '/dashboard', title: 'Dashboard', icon: 'ni-tv-2 text-primary', class: ''},
+  {path: '/user-profile', title: 'User profile', icon: 'ni-single-02 text-yellow', class: ''},
+  {path: '/UserList', title: 'UserList', icon: 'ni-bullet-list-67 text-red', class: ''},
+  {path: '/CreateUser', title: 'CreateUser', icon: 'ni-single-02 text-yellow', class: ''},
+  {path: '/view-bookings', title: 'Bookings', icon: 'ni-single-02 text-yellow', class: ''},
+  { path: '/packages', title: 'Packages', icon:'ni-bullet-list-67 text-red', class: ''}
+];
 
 @Component({
   selector: 'app-sidebar',
@@ -26,12 +27,13 @@ export class SidebarComponent implements OnInit {
   public menuItems: any[];
   public isCollapsed = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
     this.router.events.subscribe((event) => {
       this.isCollapsed = true;
-   });
+    });
   }
 }

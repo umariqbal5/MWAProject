@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import {BookingService} from './services/booking.service';
 
 import {JwtModule} from '@auth0/angular-jwt';
 import {AuthGuard} from './gaurds/auth.guard';
@@ -52,7 +53,8 @@ export function tokenGetter() {
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    BookingService
   ],
   bootstrap: [AppComponent]
 })
