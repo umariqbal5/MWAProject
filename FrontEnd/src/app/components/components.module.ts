@@ -5,19 +5,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ViewBookingComponent } from './view-booking/view-booking.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    NgbModule
+    NgbModule,
   ],
   declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    ViewBookingComponent
   ],
   exports: [
     FooterComponent,
