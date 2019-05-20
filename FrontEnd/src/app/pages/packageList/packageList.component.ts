@@ -32,7 +32,8 @@ export class PackageListComponent implements OnInit {
     this.router.navigate([`/update/${id}`]);
   }
 
-  deleteUserById(id) {
+  deletePackageById(id) {
+    console.log('inside delete component id');
     this.packageService
       .deletePackageById(id)
       .subscribe(() => {
@@ -40,9 +41,10 @@ export class PackageListComponent implements OnInit {
     });
   }
 
-  deleteUserByName(name) {
+  deletePackageByName(name) {
+    console.log('inside delete component name ');
     this.packageService
-      .deletePackageById(name)
+      .deletePackageByName(name)
       .subscribe(() => {
         this.fetchPackages();
       });

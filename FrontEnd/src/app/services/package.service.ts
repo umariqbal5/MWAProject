@@ -35,7 +35,7 @@ export class PackageService {
     const pkg = {
       package: {
         name: name,
-        type: type,
+        package_type: type,
         image_url: image_url
       },
       destination: destination,
@@ -50,7 +50,7 @@ export class PackageService {
     const pkg = {
       package: {
         name: name,
-        type: type,
+        package_type: type,
         image_url: image_url
       },
       destination: destination,
@@ -58,14 +58,14 @@ export class PackageService {
       price: price
     };
 
-    return this.http.put(`${this.uri}/package/update/${name}`, pkg);
+    return this.http.put(`${this.uri}/package/update/name/${name}`, pkg);
   }
 
   updatePackageById(id, name, type, image_url, destination, hotel, price) {
     const pkg = {
       package: {
         name: name,
-        type: type,
+        package_type: type,
         image_url: image_url
       },
       destination: destination,
@@ -73,15 +73,15 @@ export class PackageService {
       price: price
     };
 
-    return this.http.put(`${this.uri}/package/update/${name}`, pkg);
+    return this.http.put(`${this.uri}/package/update/id/${id}`, pkg);
   }
 
   deletePackageById(id) {
-    return this.http.delete(`{this.uri}/package/delete/${id}`);
+    return this.http.delete(`${this.uri}/package/delete/id/${id}`);
   }
 
   deletePackageByName(name) {
-    return this.http.delete(`{this.uri}/package/delete/${name}`);
+    return this.http.delete(`${this.uri}/package/delete/name/${name}`);
   }
 }
 
