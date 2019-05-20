@@ -1,0 +1,50 @@
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://soulcrazy.org/wp-content/uploads/2018/04/world-tourism-1.jpg?x92443); background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-8"></span>
+  <!-- Header container -->
+  <div class="container-fluid d-flex align-items-center">
+    <div class="row">
+      <div class="col-lg-7 col-md-10">
+        <h1 class="display-2 text-white">Package Details</h1>
+        <p class="text-white mt-0 mb-5">This is your package details page. You can get the package details you need to create a booking.</p>
+        <!--a href="#!" class="btn btn-info">Edit profile</a-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+      <div class="col">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <h3 class="mb-0">Package Details</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+
+              <tr>
+                <th>Id</th>
+                <th>Package Name</th>
+                <th>Package Type</th>
+                <th>Destination(s)</th>
+                <th>hotel</th>
+                <th>price</th>
+                <th></th>
+              </tr>
+
+              <tr *ngFor="let group of packages" >
+                <td>{{group._id}}</td>
+                <td>{{group.package.name}}</td>
+                <td>{{group.package.package_type}}</td>
+                <td>{{group.destination}}</td>
+                <td>{{group.hotel}}</td>
+                <Td>{{group.price}}</Td>
+
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

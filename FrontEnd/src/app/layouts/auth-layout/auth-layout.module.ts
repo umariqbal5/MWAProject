@@ -9,6 +9,8 @@ import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
 import {HomeComponent} from '../../pages/home/home.component';
 import {UserProfileComponent} from '../../pages/user-profile/user-profile.component';
+import { PackageDetailComponent } from '../../pages/packageDetail/packageDetail.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import {UserProfileComponent} from '../../pages/user-profile/user-profile.compon
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    PackageDetailComponent
   ]
 })
 export class AuthLayoutModule { }
