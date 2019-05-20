@@ -10,7 +10,6 @@ import { PackageModel } from '../../models/package.model';
 export class PackageListComponent implements OnInit {
 
   packages: PackageModel[];
-  displayedcolumns = ['id', 'name', 'type', 'destination(s)', 'hotel', 'price'];
 
   constructor(private packageService:PackageService, private router:Router) { }
 

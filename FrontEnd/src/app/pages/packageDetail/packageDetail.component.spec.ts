@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 <<<<<<< HEAD:FrontEnd/src/app/pages/packageList/packageList.component.spec.ts
-import { PackageListComponent } from './packageList.component';
+import { PackageDetailComponent } from './packageDetail.component';
 
 describe('PackageDetailComponent', () => {
-  let component: PackageListComponent;
-  let fixture: ComponentFixture<PackageListComponent>;
+  let component: PackageDetailComponent;
+  let fixture: ComponentFixture<PackageDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PackageListComponent ]
+      declarations: [ PackageDetailComponent ]
 =======
 import { CreateUserComponent } from './CreateUser.component';
 
@@ -27,7 +27,7 @@ describe('CreateUserComponent', () => {
 
   beforeEach(() => {
 <<<<<<< HEAD:FrontEnd/src/app/pages/packageList/packageList.component.spec.ts
-    fixture = TestBed.createComponent(PackageListComponent);
+    fixture = TestBed.createComponent(PackageDetailComponent);
 =======
     fixture = TestBed.createComponent(CreateUserComponent);
 >>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff:FrontEnd/src/app/pages/CreateUser/CreateUser.component.spec.ts
