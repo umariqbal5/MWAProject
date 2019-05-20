@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BookingService} from '../../../services/booking.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-admin-view-bookings',
@@ -8,18 +9,21 @@ import {BookingService} from '../../../services/booking.service';
 })
 export class AdminViewBookingsComponent implements OnInit {
 
-  constructor(private bookingService: BookingService) { }
+  constructor(private bookingService: BookingService, private route: ActivatedRoute) { }
 
   bookingList: any = [];
   ngOnInit() {
-    this.bookingService.getAllBookings().subscribe(data => this.bookingList = data );
+    this.bookingService.getAllBookings().subscribe((resutl: any) => {
+      this.bookingList = resutl.data;
+      console.log('bookingList ', this.bookingList);
+    } );
   }
 
   cancelBooking() {
-    // this.bookingService.cancelBooking();
+    this.bookingService.cancelBooking(this.route.params['pnr']);
   }
 
   deleteBooking() {
-    // this.bookingService.deleteBooking();
+    this.bookingService.deleteBooking(this.route.params['pnr']);
   }
 }

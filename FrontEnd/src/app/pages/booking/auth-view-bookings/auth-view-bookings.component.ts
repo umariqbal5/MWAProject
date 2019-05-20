@@ -14,8 +14,8 @@ export class AuthViewBookingsComponent implements OnInit {
   bookingList: any = [];
   ngOnInit() {
     // Get auth user
-    this.bookingService.getAllBookingsByUser().subscribe(data => {
-      this.bookingList = data;
+    this.bookingService.getAllBookingsByUser().subscribe((result: any) => {
+      this.bookingList = result.data;
       console.log('getAllBookingsByUser: ', this.bookingList);
     });
 
@@ -26,7 +26,7 @@ export class AuthViewBookingsComponent implements OnInit {
     //   'no_child': 0,
     //   'startDate': 1565154000000,
     //   'endDate': 1565845200000,
-    //   'totalPrice': 1111
+    //   'totalPrice': 2222.2
     // };
     //
     // this.bookingService.insertBooking(newBooking).subscribe(result => {

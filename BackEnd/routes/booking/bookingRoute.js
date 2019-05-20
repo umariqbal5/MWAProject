@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const express = require('express');
 const User = require('../../models/users/User')
 const package = require('../../models/packages/packageSchema');
@@ -18,9 +20,8 @@ router.get('/api/all-bookings', async (req, res) => {
 // find all bookings for a user
 router.get('/api/user-bookings', async (req, res) => {
     try {
-        console.log('headers', req.headers);
-        // let userId = req.headers.userID.userID;
-        let userId = '5ce2b138274d0e8da9407320';
+        console.log('headers', req.user.userID);
+        let userId = mongoose.Types.ObjectId(req.user.userID);
         let result = await BookingInfo.find({'user._id': userId});
         res.status(200).json({success: 1, msg:'', data: result});
     } catch (e) {
@@ -43,8 +44,7 @@ router.get('/api/booking/:pnr', async (req, res) => {
 router.post('/api/booking', async (req, res) => {
     try {
         console.log('req.headers: ', req.headers);
-        // let userId = req.headers.userID.userID;
-        let userId = '5ce2b138274d0e8da9407320';
+        let userId = req.user.userID;
         let user = await User.findById(userId);
         let booking = req.body;
         booking.user = user;
