@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../../services/user.service';
+import {UserService} from '../../../services/user.service';
 import {Router} from '@angular/router';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './CreateUser.component.html',
-  styleUrls: ['./CreateUser.component.scss']
+  templateUrl: './createUser.component.html',
+  styleUrls: ['./createUser.component.scss']
 })
 export class CreateUserComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class CreateUserComponent implements OnInit {
 
    addUser(first_name,last_name,email,phone_number,username,password,state,city,zipcode){
      this.userService.addUser(first_name,last_name,email,phone_number,username,password,state,city,zipcode).subscribe(()=>{
-        this.router.navigate(['/UserList']);
+        this.router.navigate(['/userList']);
      });
    }
 

@@ -11,11 +11,11 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   getUsers(){
-    return this.http.get(`${this.uri}/users`);
+    return this.http.get(`${this.uri}/users/api/`);
   }
 
   getUserById(id){
-      return this.http.get(`${this.uri}/users/${id}`); 
+      return this.http.get(`${this.uri}/users/api/${id}`);
   }
 
   addUser(first_name,last_name,email,phone_number,username,password,state,city,zipcode){
@@ -32,7 +32,7 @@ export class UserService {
         zipcode : zipcode
       }
     };
-    return this.http.post(`${this.uri}/users/add`,user);
+    return this.http.post(`${this.uri}/users/api/add`,user);
   }
 
   updateUser(id,first_name,last_name,email,phone_number,username,password,state,city,zipcode,role){
@@ -50,10 +50,10 @@ export class UserService {
       },
       role:role
     };
-    return this.http.post(`${this.uri}/users/update/${id}`,user);
+    return this.http.post(`${this.uri}/users/api/update/${id}`,user);
   }
 
   deleteUser(id){
-    return this.http.delete(`${this.uri}/users/delete/${id}`);
+    return this.http.delete(`${this.uri}/users/api/delete/${id}`);
   }
 }

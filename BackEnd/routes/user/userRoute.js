@@ -4,7 +4,7 @@ const User = require('../../models/users/User');
 
 const router = express.Router();
 
-router.route('/').get((req,res)=>{
+router.route('/api/').get((req,res)=>{
     User.find((err,users)=>{
         if(err)
             console.log(err);
@@ -13,7 +13,7 @@ router.route('/').get((req,res)=>{
     });
 });
 
-router.route('/:id').get((req,res)=>{
+router.route('/api/:id').get((req,res)=>{
     User.findById(req.params.id, (err,user)=>{
         if(err)
             console.log(err);
@@ -24,18 +24,18 @@ router.route('/:id').get((req,res)=>{
 
 });
 
-router.route('/add').post((req,res)=>{
+router.route('/api/add').post((req,res)=>{
     let user = new User(req.body);
     user.save()
         .then(user=>{
-            res.status(200).json({'user':'Added successfully'});
+            res.status(200).json({success: 1,'user':'Added successfully'});
         })
         .catch(err=>{
-            res.status(400).send('Failed to create new record');
+            res.status(400).send({success: 0,msg: 'Failed to create new record'});
         })
 });
 
-router.route('/update/:id').post((req,res)=>{
+router.route('/api/update/:id').post((req,res)=>{
     User.findById(req.params.id, (err,user)=>{
         if(!user)
             return next(new Error('Could not load document'));
@@ -48,22 +48,23 @@ router.route('/update/:id').post((req,res)=>{
             user.address.state = req.body.address.state;
             user.address.city = req.body.address.city;
             user.address.zipcde = req.body.address.zipcde;
+            user.role = req.body.role;
             
 
             user.save().then(user=>{
-                res.json('Update done');
+                res.status(200).json({success: 1,msg: 'Update done'});
             }).catch(err=>{
-                res.status(400).send('Update field');
+                res.status(400).send({success: 0, msg: 'Update field'});
             });
     });
 });
 
-router.route('/delete/:id').delete((req,res)=>{
+router.route('/api/delete/:id').delete((req,res)=>{
     User.findByIdAndRemove({_id: req.params.id}, (err, user)=>{
        if(err)
           res.json(err);  
        else
-            res.json('Removed successfully');
+            res.json({success: 1,msg: 'Removed successfully'});
     });
 });
 
