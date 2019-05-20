@@ -7,15 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  API_URL: string = 'http://localhost:4000/api';
-=======
   API_URL: string = "http://localhost:4000";
->>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff
-=======
-  API_URL: string = "http://localhost:4000";
->>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff
 
 
   login(user: string, pass: string): Observable<boolean> {

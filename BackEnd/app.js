@@ -30,11 +30,7 @@ const port = 4000;
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(bodyParser.json());
 app.use(cors());
-//<<<<<<< HEAD
-app.use(expressJwt({secret: db_url.secret}).unless({path: ['/auth/login','/auth/register']}));
-//=======
-app.use(expressJwt({secret: db_url.secret}).unless({path: ['/auth/login','/auth/register']}));
-//>>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff
+//app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/auth/login','/auth/register']}));
 
 //========================connection=================
 
@@ -47,9 +43,9 @@ connection.once('open',()=>{
 });
 //================================================
 
-app.use('/api/auth', authRoute);
-app.use('/api/users', userRoute);
-app.use('/api/package', packageRout);
-app.use('/api/', bookingRoute);
+app.use('/auth', authRoute);
+app.use('/users', userRoute);
+app.use('/package', packageRout);
+app.use('', bookingRoute);
 
 app.listen(port, ()=>console.log("listening to :  http://localhost:" + port));
