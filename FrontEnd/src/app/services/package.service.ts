@@ -31,11 +31,12 @@ export class PackageService {
     return this.http.get(`${this.uri}/package/destination/${destination}`);
   }
 
-  addPackage(name, type, image_url, destination, hotel, price) {
+  addPackage(name, type, image_url, description, destination, hotel, price) {
     const pkg = {
       package: {
         name: name,
         package_type: type,
+        description: description,
         image_url: image_url
       },
       destination: destination,
@@ -46,11 +47,12 @@ export class PackageService {
     return this.http.post(`${this.uri}/package/add`, pkg);
   }
 
-  updatePackageByName(name, type, image_url, destination, hotel, price) {
+  updatePackageByName(name, type, image_url, description, destination, hotel, price) {
     const pkg = {
       package: {
         name: name,
         package_type: type,
+        description: description,
         image_url: image_url
       },
       destination: destination,
@@ -61,11 +63,12 @@ export class PackageService {
     return this.http.put(`${this.uri}/package/update/name/${name}`, pkg);
   }
 
-  updatePackageById(id, name, type, image_url, destination, hotel, price) {
+  updatePackageById(id, name, type, description, image_url, destination, hotel, price) {
     const pkg = {
       package: {
         name: name,
         package_type: type,
+        description: description,
         image_url: image_url
       },
       destination: destination,
