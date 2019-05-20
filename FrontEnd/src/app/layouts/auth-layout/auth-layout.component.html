@@ -33,29 +33,45 @@
               <span class="nav-link-inner--text">Home</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="auth.loggedIn">
             <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/dashboard']">
               <i class="ni ni-planet"></i>
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!auth.loggedIn">
             <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/register']">
               <i class="ni ni-circle-08"></i>
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!auth.loggedIn">
             <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/login']">
               <i class="ni ni-key-25"></i>
               <span class="nav-link-inner--text">Login</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/user-profile']">
+          <li class="nav-item" *ngIf="auth.loggedIn">
+            <a class="nav-link nav-link-icon" (click)="logout()" href="#">
+              <i class="ni ni-key-25"></i>
+              <span class="nav-link-inner--text">LogOut</span>
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="auth.loggedIn">
+            <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/bookings']">
               <i class="ni ni-single-02"></i>
               <span class="nav-link-inner--text">My Bookings</span>
             </a>
+          </li>
+          <li class="nav-item" *ngIf="auth.loggedIn">
+            <div class="media align-items-center">
+            <span class="avatar avatar-sm rounded-circle">
+              <img alt="Image placeholder" src="assets/img/new_logo.png">
+            </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold text-white">{{auth.getUser()}}</span>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
