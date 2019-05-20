@@ -30,7 +30,8 @@ const port = 4000;
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(bodyParser.json());
 app.use(cors());
-// app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/auth/login','/auth/register']}));
+app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/api/auth/login','/api/auth/register']}));
+
 
 //========================connection=================
 
@@ -43,7 +44,7 @@ connection.once('open',()=>{
 });
 //================================================
 
-app.use('/auth', authRoute);
+app.use('/api/auth', authRoute);
 app.use('/users', userRoute);
 app.use('/api/package', packageRout);
 app.use('', bookingRoute);
