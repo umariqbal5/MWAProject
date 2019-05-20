@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import {Router} from '@angular/router';
+=======
+import {Router}from '@angular/router';
+>>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff
 import {UserService} from '../../services/user.service';
 import {User} from '../../user.model';
 @Component({

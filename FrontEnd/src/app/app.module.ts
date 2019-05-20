@@ -44,7 +44,11 @@ export function tokenGetter() {
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
+<<<<<<< HEAD
     //PackageListComponent
+=======
+    //UserListComponent
+>>>>>>> 84f322c3eead7a1b4352247dd56ccbf59cd33fff
   ],
   providers: [
     AuthService,
