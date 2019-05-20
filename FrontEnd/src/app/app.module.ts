@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+
 import {JwtModule} from '@auth0/angular-jwt';
 import {AuthGuard} from './gaurds/auth.guard';
 import {AuthService} from './services/auth.service';
@@ -42,7 +43,8 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    //UserListComponent
   ],
   providers: [
     AuthService,

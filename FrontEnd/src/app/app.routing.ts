@@ -5,8 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import {UserListComponent} from './pages/UserList/UserList.component';
 
 const routes: Routes = [
+  // {
+  //   path: 'CreateUser' , component: CreateListComponent
+  // },
   {
     path: '',
     redirectTo: 'home',
