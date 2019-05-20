@@ -151,3 +151,7 @@
 ::ffff:127.0.0.1 - - [20/May/2019:14:30:03 +0000] "POST /api/auth/login HTTP/1.1" 404 154 "http://localhost:4200/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
 ::ffff:127.0.0.1 - - [20/May/2019:14:30:23 +0000] "OPTIONS /auth/login HTTP/1.1" 204 0 "http://localhost:4200/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
 ::ffff:127.0.0.1 - - [20/May/2019:14:30:23 +0000] "POST /auth/login HTTP/1.1" 200 297 "http://localhost:4200/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+::ffff:127.0.0.1 - - [20/May/2019:14:37:55 +0000] "OPTIONS /auth/login HTTP/1.1" 204 0 "http://localhost:4200/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+::ffff:127.0.0.1 - - [20/May/2019:14:37:55 +0000] "POST /auth/login HTTP/1.1" 200 297 "http://localhost:4200/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+::ffff:127.0.0.1 - - [20/May/2019:14:47:32 +0000] "OPTIONS /api/package HTTP/1.1" 204 0 "http://localhost:4200/packages" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+::ffff:127.0.0.1 - - [20/May/2019:14:47:32 +0000] "GET /api/package HTTP/1.1" 200 1810 "http://localhost:4200/packages" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
