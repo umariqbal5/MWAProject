@@ -5,7 +5,7 @@ const User = require('../../models/users/User');
 const router = express.Router();
 
 router.route('/').get((req,res)=>{
-    console.log(req.body)
+
     User.find((err,users)=>{
         if(err)
             console.log(err);
@@ -26,14 +26,16 @@ router.route('/:id').get((req,res)=>{
 });
 
 router.route('/add').post((req,res)=>{
+    console.log(req.user)
     let user = new User(req.body);
-    user.save()
-        .then(user=>{
-            res.status(200).json({'user':'Added successfully'});
-        })
-        .catch(err=>{
-            res.status(400).send('Failed to create new record');
-        })
+    // user.save()
+    //     .then(user=>{
+    //         res.status(200).json({'user':'Added successfully'});
+    //     })
+    //     .catch(err=>{
+    //         res.status(400).send('Failed to create new record');
+    //     })
+    res.json({'user':'Added successfully' })
 });
 
 router.route('/update/:id').post((req,res)=>{
