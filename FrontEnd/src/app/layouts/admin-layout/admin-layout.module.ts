@@ -11,9 +11,10 @@ import {DashboardComponent} from '../../pages/dashboard/dashboard.component';
 import {UserProfileComponent} from '../../pages/user-profile/user-profile.component';
 import {TablesComponent} from '../../pages/tables/tables.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {UserListComponent} from '../../pages/UserList/UserList.component';
-import {CreateUserComponent} from '../../pages/CreateUser/CreateUser.component';
+import {UserListComponent} from '../../pages/users/userList/UserList.component';
+import {CreateUserComponent} from '../../pages/users/createUser/CreateUser.component';
 import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-bookings/admin-view-bookings.component';
+import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -29,7 +30,7 @@ import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-booking
   ],
   declarations: [
     DashboardComponent,
-    // UserProfileComponent,
+    EditUserComponent,
     TablesComponent,
     UserListComponent,
     CreateUserComponent,

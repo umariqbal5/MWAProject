@@ -17,6 +17,8 @@ import {BookingService} from './services/booking.service';
 import {JwtModule} from '@auth0/angular-jwt';
 import {AuthGuard} from './gaurds/auth.guard';
 import {AuthService} from './services/auth.service';
+// import { SearchPipe } from './search.pipe';
+// import { SortPipe } from './pipes/sort.pipe';
 
 
 export function tokenGetter() {
@@ -36,15 +38,18 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ['localhost:4000','127.0.0.1:4000'],
-        blacklistedRoutes: ['localhost:4000/auth/login','localhost:4000/auth/register']
+        whitelistedDomains: ["localhost:4000"],
+        blacklistedRoutes: ["localhost:4000/api/auth/login","localhost:4000/api/auth/register"]
       }
     })
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent,
+    AuthLayoutComponent
+    // SearchPipe,
+    // SortPipe,
+    //UserListComponent
   ],
   providers: [
     AuthService,

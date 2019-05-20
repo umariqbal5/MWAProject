@@ -17,7 +17,7 @@ router.post('/login',(req,res)=>{
                     {
                         userID: user._id
                     }
-                    , db_url.secrete, {expiresIn: '12h'});
+                    , db_url.secrete, {expiresIn: '1200h'});
                 res.json({
                     success: 1,
                     msg: 'login success',
