@@ -42,9 +42,9 @@ connection.once('open',()=>{
 });
 //================================================
 
-app.use('/auth', authRoute);
-app.use('/users', userRoute);
-app.use('/package', packageRout);
-app.use('', bookingRoute);
+app.use('/api/auth', authRoute);
+app.use('/api/users', userRoute);
+app.use('/api/package', packageRout);
+app.use('/api/', bookingRoute);
 
 app.listen(port, ()=>console.log("listening to :  http://localhost:" + port));
