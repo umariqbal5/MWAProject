@@ -3,6 +3,7 @@ export interface PackageModel {
   package: {
     name: string,
     package_type: string,
+    description: string,
     image_url: string
   };
   destination: Array<string>;
