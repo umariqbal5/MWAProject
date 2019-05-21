@@ -63,8 +63,8 @@ argon-dashboard-angular
 │   │   │   ├── login
 │   │   │   │   ├── login.component.html
 │   │   │   │   ├── login.component.scss
-│   │   │   │   ├── login.component.spec.ts
-│   │   │   │   └── login.component.ts
+│   │   │   │   ├── error.component.spec.ts
+│   │   │   │   └── error.component.ts
 │   │   │   ├── maps
 │   │   │   │   ├── maps.component.html
 │   │   │   │   ├── maps.component.scss

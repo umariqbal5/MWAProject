@@ -41,13 +41,13 @@ router.post('/login',(req,res)=>{
 });
 
 router.post('/register', (req, res) => {
-    let user = new User(req.body);
+    let user = new User(req.body.user);
     user.save()
         .then(user=>{
-            res.status(200).json({'user':'Added successfully'});
+            res.status(200).json({'success': 1, 'msg':'Added successfully'});
         })
         .catch(err=>{
-            res.status(400).send('Failed to create new login'+ err.message);
+            res.status(400).json({'success': 0, 'msg':'Failed to create new login'+ err.message});
         })
 })
 module.exports=router;
