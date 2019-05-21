@@ -26,6 +26,7 @@ router.post('/login',(req,res)=>{
                         "username": user.username,
                         "name": user.first_name +" "+ user.last_name,
                         "email": user.email,
+                        "role": user.role
                     }
                 });
             } else{
