@@ -20,6 +20,8 @@ import {AuthService} from './services/auth.service';
 import {ClientAuthGuard} from './gaurds/client-auth.guard';
 // import { SearchPipe } from './search.pipe';
 // import { SortPipe } from './pipes/sort.pipe';
+import {ConfirmationDialogService} from './components/confirmation-dialog/confirmation-dialog.service';
+import {ConfirmationDialogComponent} from './components/confirmation-dialog/confirmation-dialog.component';
 
 
 export function tokenGetter() {
@@ -47,16 +49,19 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    ConfirmationDialogComponent
     // SearchPipe,
     // SortPipe,
     //UserListComponent
   ],
+  entryComponents: [ConfirmationDialogComponent],
   providers: [
     AuthService,
     AuthGuard,
     BookingService,
-    ClientAuthGuard
+    ClientAuthGuard,
+    ConfirmationDialogService
   ],
   bootstrap: [AppComponent]
 })
