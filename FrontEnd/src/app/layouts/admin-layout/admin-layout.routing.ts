@@ -16,7 +16,8 @@ export const AdminLayoutRoutes: Routes = [
   {path: 'tables', component: TablesComponent},
   {path: 'userList', component: UserListComponent, canActivate: [AuthGuard]},
   {path: 'createUser', component: CreateUserComponent, canActivate: [AuthGuard]},
-  {path: 'packages', component: PackageListComponent},
+  {path: 'packages', component: PackageListComponent, canActivate: [AuthGuard]},
+  {path: 'view-bookings', component: AdminViewBookingsComponent, canActivate: [AuthGuard]},
   {path: 'admin-view-bookings', component: AdminViewBookingsComponent}
 
 ];
