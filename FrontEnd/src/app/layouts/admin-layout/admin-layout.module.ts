@@ -18,6 +18,7 @@ import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
 import {PackageListComponent} from '../../pages/packages/packageList/packageList.component';
 import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
 import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -29,7 +30,8 @@ import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage
     HttpClientModule,
     NgbModule,
     ClipboardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   declarations: [
     DashboardComponent,
