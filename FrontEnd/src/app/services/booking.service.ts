@@ -32,4 +32,8 @@ export class BookingService {
   deleteBooking(pnr) {
     return this.http.get(URI + `booking/delete/${pnr}`);
   }
+  // count all booking per day per week
+  getTotalBookingPerDay() {
+    return this.http.get(URI+ 'count-bookings');
+  }
 }
