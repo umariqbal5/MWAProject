@@ -75,7 +75,8 @@ export class PackageService {
       hotel: hotel,
       price: price
     };
-
+// console.log(pkg);
+    // return this.http.put('', pkg);
     return this.http.put(`${this.uri}/package/update/id/${id}`, pkg);
   }
 
