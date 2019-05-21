@@ -63,6 +63,12 @@
               <span class="nav-link-inner--text">LogOut</span>
             </a>
           </li>
+          <li class="nav-item" *ngIf="auth.loggedIn && auth.userRole=='Admin'">
+            <a class="nav-link nav-link-icon" routerLinkActive="active" [routerLink]="['/admin-view-bookings']">
+              <i class="ni ni-single-02"></i>
+              <span class="nav-link-inner--text">Admin Bookings</span>
+            </a>
+          </li>
           <li class="nav-item" *ngIf="auth.loggedIn">
             <div class="media align-items-center">
             <span class="avatar avatar-sm rounded-circle">

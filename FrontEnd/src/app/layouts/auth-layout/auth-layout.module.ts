@@ -12,6 +12,7 @@ import {UserProfileComponent} from '../../pages/user-profile/user-profile.compon
 import {BookingDetailsComponent} from '../../pages/booking/booking-details/booking-details.component';
 import {AuthViewBookingsComponent} from '../../pages/booking/auth-view-bookings/auth-view-bookings.component';
 import {ErrorComponent} from '../../pages/error/error.component';
+import {BookAPackageComponent} from '../../pages/booking/bookAPackage/book-a-package.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +27,8 @@ import {ErrorComponent} from '../../pages/error/error.component';
     UserProfileComponent,
     BookingDetailsComponent,
     AuthViewBookingsComponent,
-    ErrorComponent
+    ErrorComponent,
+    BookAPackageComponent
   ]
 })
 export class AuthLayoutModule { }

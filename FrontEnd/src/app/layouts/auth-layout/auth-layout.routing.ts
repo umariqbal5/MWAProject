@@ -10,6 +10,7 @@ import {DashboardComponent} from '../../pages/dashboard/dashboard.component';
 import {AuthGuard} from '../../gaurds/auth.guard';
 import {ErrorComponent} from '../../pages/error/error.component';
 import {ClientAuthGuard} from '../../gaurds/client-auth.guard';
+import {BookAPackageComponent} from '../../pages/booking/bookAPackage/book-a-package.component';
 
 export const AuthLayoutRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,4 +20,5 @@ export const AuthLayoutRoutes: Routes = [
   {path: 'booking-details', component: BookingDetailsComponent, canActivate: [ClientAuthGuard]},
   {path: 'auth-view-bookings', component: AuthViewBookingsComponent, canActivate: [ClientAuthGuard]},
   {path: 'error', component: ErrorComponent},
+  {path: 'book-a-package', component: BookAPackageComponent, canActivate: [ClientAuthGuard]}
 ];

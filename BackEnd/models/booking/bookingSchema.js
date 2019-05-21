@@ -26,7 +26,7 @@ let bookingSchema = new Schema({
         enum: ['NEW', 'COMPLETED', 'CANCELLED', 'DELETED'],
         default: 'NEW'
     },
-    startDate: Date,
+    departureDate: Date,
     totalPrice: Schema.Types.Decimal128
 });
 
