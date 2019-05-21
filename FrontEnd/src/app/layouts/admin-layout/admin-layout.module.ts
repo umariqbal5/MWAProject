@@ -17,6 +17,7 @@ import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-booking
 import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
 import {PackageListComponent} from '../../pages/packages/packageList/packageList.component';
 import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
+import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -38,7 +39,8 @@ import {CreatePackageComponent} from '../../pages/packages/createPackage/createP
     CreateUserComponent,
     AdminViewBookingsComponent,
     PackageListComponent,
-    CreatePackageComponent
+    CreatePackageComponent,
+    EditPackageComponent
   ]
 })
 

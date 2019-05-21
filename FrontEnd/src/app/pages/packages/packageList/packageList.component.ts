@@ -27,7 +27,7 @@ export class PackageListComponent implements OnInit {
   }
 
   editPackageById(id) {
-    this.router.navigate([`/update/${id}`]);
+    this.router.navigate([`/editPackage/`+id]);
   }
 
   deletePackageById(id) {

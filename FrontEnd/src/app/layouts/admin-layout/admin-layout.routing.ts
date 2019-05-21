@@ -10,6 +10,7 @@ import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-booking
 import {CreateUserComponent} from '../../pages/users/createUser/CreateUser.component';
 import {UserListComponent} from '../../pages/users/userList/UserList.component';
 import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
+import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage.component';
 
 export const AdminLayoutRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
@@ -21,5 +22,6 @@ export const AdminLayoutRoutes: Routes = [
   {path: 'packages', component: PackageListComponent, canActivate: [AuthGuard]},
   {path: 'view-bookings', component: AdminViewBookingsComponent, canActivate: [AuthGuard]},
   {path: 'createPackage', component: CreatePackageComponent, canActivate: [AuthGuard]},
+  {path: 'editPackage/:id', component: EditPackageComponent, canActivate: [AuthGuard]},
 
 ];
