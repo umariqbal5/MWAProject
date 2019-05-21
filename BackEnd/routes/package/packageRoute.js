@@ -8,7 +8,7 @@ const router = express.Router();
 
 
 router.get('/', ( req, res ) => {
-    console.log('indise get package by nothing');
+
     package.find((err, pkg)=>{
         if(err){
             console.log(err);
@@ -24,7 +24,7 @@ router.get('/', ( req, res ) => {
 
 
 router.get('/name/:name', ( req, res ) => {
-    console.log('indise get package by name');
+
     package.find({ 'package.name': req.params.name.toLowerCase() }, (err, pkg) => {
         if(err){
             console.log(err);
@@ -40,7 +40,7 @@ router.get('/name/:name', ( req, res ) => {
 
 
 router.get('/type/:type', ( req, res ) => {
-    console.log('indise get package by type');
+
     package.find({ 'package.package_type': req.params.type.toLowerCase() }, (err, pkg) => {
         if(err){
             console.log(err);
@@ -56,7 +56,7 @@ router.get('/type/:type', ( req, res ) => {
 
 
 router.get('/id/:id', ( req, res ) => {
-    console.log('indise get package by id');
+
     package.find({ '_id': req.params.id }, (err, pkg) => {
         if(err){
             console.log(err);
@@ -72,7 +72,7 @@ router.get('/id/:id', ( req, res ) => {
 
 
 router.get('/destination/:destination', ( req, res ) => {
-    console.log('indise get package by destination');
+
     package.find({ 'destination': req.params.destination.toLowerCase() }, (err, pkg) => {
         if(err){
             console.log(err);
@@ -88,7 +88,7 @@ router.get('/destination/:destination', ( req, res ) => {
 
 
 router.post('/add', ( req, res ) => {
-    console.log('indise post package ');
+
     let pk = new package(req.body);
     pk.save()
         .then( p => {
@@ -102,7 +102,7 @@ router.post('/add', ( req, res ) => {
 
 
 router.put('/update/name/:name', ( req, res ) => {
-    console.log('indise put package by name');
+
     package.findOne({ 'package.name': req.params.name.toLowerCase() }, (err, pkg) => {
         if(err){
             res.status(500).json({'success': '0',
@@ -132,7 +132,7 @@ router.put('/update/name/:name', ( req, res ) => {
 
 
 router.put('/update/id/:id', ( req, res ) => {
-console.log('indise updated package by id');
+
     package.findById(req.params.id, (err, pkg) => {
         if (err) {
             res.status(500).json({
@@ -163,7 +163,7 @@ console.log('indise updated package by id');
 
 
 router.delete('/delete/id/:id', ( req, res ) => {
-console.log('inside delete');
+
     package.deleteOne({_id: req.params.id}, (err)=>{
         if(err){
             res.status(500).json({
@@ -181,7 +181,7 @@ console.log('inside delete');
 
 
 router.delete('/delete/name/:name', ( req, res ) => {
-    console.log('inside delete');
+
     package.deleteOne({'package.name': req.params.name}, (err)=>{
         if(err){
             res.status(500).json({
