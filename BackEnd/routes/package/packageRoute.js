@@ -115,9 +115,10 @@ router.put('/update/name/:name', ( req, res ) => {
         else{
             pkg.package.name = req.body.package.name;
             pkg.package.description = req.body.package.description;
-            pkg.package.package_type = req.body.package.image_url;
+            pkg.package.package_type = req.body.package.package_type;
+            pkg.package.image_url = req.body.package.image_url;
             pkg.destination = req.body.destination;
-            pkg.hotle = req.body.hotel;
+            pkg.hotel = req.body.hotel;
             pkg.price = req.body.price;
 
             pkg.save().then(p => {
@@ -144,9 +145,11 @@ router.put('/update/id/:id', ( req, res ) => {
         } else {
             pkg.package.name = req.body.package.name;
             pkg.package.description = req.body.package.description;
-            pkg.package.package_type = req.body.package.image_url;
+            pkg.package.package_type = req.body.package.package_type;
+            pkg.package.image_url = req.body.package.image_url;
             pkg.destination = req.body.destination;
-            pkg.hotle = req.body.hotel;
+            console.log("hotellll iss ", req.body.hotel);
+            pkg.hotel = req.body.hotel;
             pkg.price = req.body.price;
 
             pkg.save().then(p => {
@@ -160,7 +163,7 @@ router.put('/update/id/:id', ( req, res ) => {
 
 
 router.delete('/delete/id/:id', ( req, res ) => {
-console.log('inside delete');
+
     package.deleteOne({_id: req.params.id}, (err)=>{
         if(err){
             res.status(500).json({
