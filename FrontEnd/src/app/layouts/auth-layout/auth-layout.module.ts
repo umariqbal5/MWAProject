@@ -11,7 +11,7 @@ import {HomeComponent} from '../../pages/home/home.component';
 import {UserProfileComponent} from '../../pages/user-profile/user-profile.component';
 import {BookingDetailsComponent} from '../../pages/booking/booking-details/booking-details.component';
 import {AuthViewBookingsComponent} from '../../pages/booking/auth-view-bookings/auth-view-bookings.component';
-import {BookAPackageComponent} from '../../pages/booking/bookAPackage/book-a-package.component';
+import {BookAPackageComponent} from '../../pages/booking/book-a-package/book-a-package.component';
 @NgModule({
   imports: [
     CommonModule,

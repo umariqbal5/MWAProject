@@ -23,10 +23,11 @@ let bookingSchema = new Schema({
     no_child: Number,
     bookingStatus: {
         type: String,
-        enum: ['NEW', 'COMPLETED', 'CANCELLED', 'DELETED'],
-        default: 'NEW'
+        enum: ['CONFIRMED', 'COMPLETED', 'CANCELLED', 'DELETED'],
+        default: 'CONFIRMED'
     },
     departureDate: Date,
+    duration: Number,
     totalPrice: Schema.Types.Decimal128
 });
 
