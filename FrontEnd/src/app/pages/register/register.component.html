@@ -24,6 +24,7 @@
       <div class="card bg-secondary shadow border-0">
         <div class="card-body px-lg-5 py-lg-5">
           <div class="text-center text-muted mb-4">
+            <h3 *ngIf="error">{{error}}</h3>
             <small>sign up with credentials</small>
           </div>
           <form role="form" (ngSubmit)="register(f)" #f="ngForm">
@@ -33,9 +34,17 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                 </div>
-                <input required class="form-control" placeholder="First Name" type="text" name="name" [(ngModel)]="user.name">
+                <input required class="form-control" placeholder="First Name" type="text" name="first_name" [(ngModel)]="user.first_name">
               </div>
             </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  </div>
+                  <input required class="form-control" placeholder="Last Name" type="text" name="last_name" [(ngModel)]="user.last_name">
+                </div>
+              </div>
             <div class="form-group">
               <div class="input-group input-group-alternative mb-3">
                 <div class="input-group-prepend">

@@ -63,8 +63,8 @@ argon-dashboard-angular
 │   │   │   ├── login
 │   │   │   │   ├── login.component.html
 │   │   │   │   ├── login.component.scss
-│   │   │   │   ├── login.component.spec.ts
-│   │   │   │   └── login.component.ts
+│   │   │   │   ├── error.component.spec.ts
+│   │   │   │   └── error.component.ts
 │   │   │   ├── maps
 │   │   │   │   ├── maps.component.html
 │   │   │   │   ├── maps.component.scss
@@ -84,7 +84,7 @@ argon-dashboard-angular
 │   │   │       ├── user-profile.component.html
 │   │   │       ├── user-profile.component.scss
 │   │   │       ├── user-profile.component.spec.ts
-│   │   │       └── user-profile.component.ts
+│   │   │       └── book-a-package.component.ts
 │   │   └── variables
 │   │       └── charts.ts
 │   ├── assets

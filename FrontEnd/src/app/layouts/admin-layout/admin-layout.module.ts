@@ -15,8 +15,8 @@ import {UserListComponent} from '../../pages/users/userList/UserList.component';
 import {CreateUserComponent} from '../../pages/users/createUser/CreateUser.component';
 import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-bookings/admin-view-bookings.component';
 import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
-import {PackageListComponent} from '../../pages/packages/packageList/packageList.component';
-import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
+import {PackageListComponent} from '../../pages/packageList/packageList.component';
+
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -36,8 +36,7 @@ import {CreatePackageComponent} from '../../pages/packages/createPackage/createP
     UserListComponent,
     CreateUserComponent,
     AdminViewBookingsComponent,
-    PackageListComponent,
-    CreatePackageComponent
+    PackageListComponent
   ]
 })
 
