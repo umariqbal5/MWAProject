@@ -14,4 +14,5 @@ export interface BookingModel extends Document {
   departureDate: Date;
   duration: number;
   totalPrice: number;
+  createdAt: Date;
 }

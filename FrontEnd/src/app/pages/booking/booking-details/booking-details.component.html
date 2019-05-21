@@ -109,12 +109,12 @@
             <div class="col">
               <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                 <div>
-                  <span class="heading">Booking Reference Number</span>
-                  <span class="description">{{booking.bookingRef}}</span>
+                  <span class="heading">{{booking.bookingRef}}</span>
+                  <span class="description">Booking Reference Number</span>
                 </div>
                 <div>
-                  <span class="heading">Status</span>
-                  <span class="description">{{booking.bookingStatus}}</span>
+                  <span class="heading">{{booking.bookingStatus}}</span>
+                  <span class="description">Status</span>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@
               <i class="ni education_hat mr-2" *ngFor="let p of booking.travelers, let i=index">Guest {{i+1}}: {{p.name}}</i>
             </div>
             <hr class="my-4"/>
-            <h3>Total Price: ${{booking.totalPrice}}</h3>
+            <h3>Total Price: ${{booking.totalPrice.$numberDecimal}}</h3>
             <!--            <a href="javascript:void(0)">Show more</a>-->
           </div>
         </div>

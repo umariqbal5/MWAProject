@@ -10,7 +10,7 @@ const shortid = require('shortid');
 // find all bookings for all users
 router.get('/api/all-bookings', async (req, res) => {
     try {
-        let result = await BookingInfo.find({bookingStatus: {$ne: 'DELETED'}});
+        let result = await BookingInfo.find({bookingStatus: {$ne: 'DELETED'}}).sort({createdAt: -1});
         res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
@@ -22,7 +22,10 @@ router.get('/api/user-bookings', async (req, res) => {
     try {
         console.log('headers', req.user.userID);
         let userId = mongoose.Types.ObjectId(req.user.userID);
-        let result = await BookingInfo.find({'user._id': userId, bookingStatus: {$ne: 'DELETED'}});
+        let result = await BookingInfo.find({
+            'user._id': userId,
+            bookingStatus: {$ne: 'DELETED'}
+        }).sort({createdAt: -1});
         res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
@@ -74,11 +77,41 @@ router.get('/api/booking/cancel/:pnr', async (req, res) => {
     }
 })
 
-//delete a booking
+// delete a booking
 router.get('/api/booking/delete/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await updateBookingStatus(pnr, 'DELETED');
+        res.status(200).json({success: 1, msg: '', data: result});
+    } catch (e) {
+        res.status(400).send(e);
+    }
+})
+
+// count a booking per day per week
+router.get('/api/count-bookings', async (req, res) => {
+    try {
+        let result = await BookingInfo.aggregate([{
+            $match: {
+                bookingStatus: 'CONFIRMED'
+            }
+        }, {
+            $project: {
+                year: {$year: '$createdAt'},
+                month: {$month: '$createdAt'},
+                dayOfMonth: {$dayOfMonth: '$createdAt'},
+            }
+        }, {
+            $group: {
+                _id: {
+                    year: '$year',
+                    month: '$month',
+                    dayOfMonth: '$dayOfMonth'
+                },
+                totalBooking: {$sum: 1}
+            }
+        },]);
+        // result: [ { _id: { year: 2019, month: 5, dayOfMonth: 21 },totalBooking: 12 } ]
         res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);

@@ -1,104 +1,141 @@
-<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+     style="min-height: 100px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
   <!-- Mask -->
   <span class="mask bg-gradient-danger opacity-8"></span>
-  <!-- Header container -->
-  <div class="container-fluid d-flex align-items-center">
-    <div class="row">
-      <div class="col-lg-7 col-md-10">
-        <h1 class="display-2 text-white">Hello Jesse</h1>
-        <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-        <a href="#!" class="btn btn-info">Edit profile</a>
-      </div>
-    </div>
-  </div>
 </div>
 <div class="container-fluid mt--7">
   <div class="row">
-    <div class="col-xl-8 order-xl-1">
+    <div class="col-xl-12 order-xl-1">
       <div class="card bg-secondary shadow">
         <div class="card-header bg-white border-0">
           <div class="row align-items-center">
-            <div class="col-8">
+            <div class="col-10">
               <h3 class="mb-0">Book A Trip</h3>
-            </div>
-            <div class="col-4 text-right">
-              <a href="#!" class="btn btn-sm btn-primary">Settings</a>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <form>
-            <h6 class="heading-small text-muted mb-4">User information</h6>
+          <form [formGroup]="bookingForm" (ngSubmit)="bookATrip()">
+            <!-- Package information -->
+            <h6 class="heading-small text-muted mb-4">Package information</h6>
             <div class="pl-lg-4">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-username">Username</label>
-                    <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                    <label class="form-control-label" for="input-pkgname">Package</label>
+                    <input type="text" id="input-pkgname" class="form-control form-control-alternative"
+                           value="{{packageInfo.package.name}}" [disabled]="true">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-email">Email address</label>
-                    <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                    <label class="form-control-label" for="input-pkgtype">Type</label>
+                    <input type="text" id="input-pkgtype" class="form-control form-control-alternative"
+                           value="{{packageInfo.package.package_type}}" [disabled]="true">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-first-name">First name</label>
-                    <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                    <label class="form-control-label" for="input-pkgdes">Destination</label>
+                    <input type="text" id="input-pkgdes" class="form-control form-control-alternative"
+                           value="{{packageInfo.package.description}}" [disabled]="true">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-last-name">Last name</label>
-                    <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
+                    <label class="form-control-label" for="input-pkghotel">Hotel</label>
+                    <input type="text" id="input-pkghotel" class="form-control form-control-alternative"
+                           value="{{packageInfo.hotel}}" [disabled]="true">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-pkgdete">Departure Date</label>
+                    <input type="date" id="input-pkgdete" class="form-control form-control-alternative"
+                           formControlName="departureDate"
+                           [ngClass]="{ 'is-invalid': submitted && bookingForm.departureDate.errors }"/>
+                    <div *ngIf="submitted && bookingForm.departureDate.errors" class="invalid-feedback">
+                      <div *ngIf="bookingForm.departureDate.errors.required">Departure Date is required</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label" for="input-duration">Trip duration</label>
+                  <input type="number" id="input-duration" class="form-control form-control-alternative"
+                         formControlName="duration"
+                         [ngClass]="{ 'is-invalid': submitted && bookingForm.duration.errors }"/>
+                  <div *ngIf="submitted && bookingForm.duration.errors" class="invalid-feedback">
+                    <div *ngIf="bookingForm.duration.errors.required">Trip duration is required</div>
                   </div>
                 </div>
               </div>
             </div>
-            <hr class="my-4" />
-            <!-- Address -->
-            <h6 class="heading-small text-muted mb-4">Contact information</h6>
-            <div class="pl-lg-4">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-address">Address</label>
-                    <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label" for="input-adult">Number of Adult</label>
+                  <input type="number" id="input-adult" class="form-control form-control-alternative"
+                         formControlName="no_adult"
+                         [ngClass]="{ 'is-invalid': submitted && bookingForm.no_adult.errors }"/>
+                  <div *ngIf="submitted && bookingForm.no_adult.errors" class="invalid-feedback">
+                    <div *ngIf="bookingForm.no_adult.errors.required">No of adult is required</div>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-city">City</label>
-                    <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
-                  </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label" for="input-child">Number of child</label>
+                  <input type="number" id="input-child" class="form-control form-control-alternative"
+                         formControlName="no_child">
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-country">Country</label>
-                    <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
+              </div>
+            </div>
+
+            <hr class="my-4"/>
+            <!-- Traveller -->
+            <h6 class="heading-small text-muted mb-4">Traveller</h6>
+            <div class="pl-lg-4">
+              <div class="col-12 text-right">
+                <button type="button" (click)="addATraveller()" class="btn btn-info">Add A Traveller</button>
+              </div>
+              <div class="row" formArrayName="travelers"
+                   *ngFor="let travel of bookingForm.get('travelers').controls let i = index">
+                <div class="col-12" [formGroupName]="i">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-full-name">Fulll Name</label>
+                      <input type="text" id="input-full-name" class="form-control form-control-alternative"
+                             placeholder="Full name" formControlName="name"
+                             [ngClass]="{ 'is-invalid': submitted && bookingForm.name.errors }"/>
+                      <div *ngIf="submitted && bookingForm.name.errors" class="invalid-feedback">
+                        <div *ngIf="bookingForm.name.errors.required">Guest name is required</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-country">Postal code</label>
-                    <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-phone-number">Phone</label>
+                      <input type="text" id="input-phone-number" class="form-control form-control-alternative"
+                             placeholder="Phone number" formControlName="phone"
+                             [ngClass]="{ 'is-invalid': submitted && bookingForm.phone.errors }"/>
+                      <div *ngIf="submitted && bookingForm.phone.errors" class="invalid-feedback">
+                        <div *ngIf="bookingForm.phone.errors.required">Phone is required</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <hr class="my-4" />
-            <!-- Description -->
-            <h6 class="heading-small text-muted mb-4">About me</h6>
+            <hr class="my-4"/>
             <div class="pl-lg-4">
-              <div class="form-group">
-                <label>About Me</label>
-                <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+              <div class="col-12 text-right">
+                <button type="submit" class="btn btn-info" (click)="bookATrip()">Book</button>
               </div>
             </div>
           </form>

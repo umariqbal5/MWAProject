@@ -23,12 +23,13 @@ let bookingSchema = new Schema({
     no_child: Number,
     bookingStatus: {
         type: String,
-        enum: ['CONFIRMED', 'COMPLETED', 'CANCELLED', 'DELETED'],
+        enum: ['CONFIRMED', 'CANCELLED', 'DELETED'],
         default: 'CONFIRMED'
     },
     departureDate: Date,
     duration: Number,
-    totalPrice: Schema.Types.Decimal128
+    totalPrice: Schema.Types.Decimal128,
+    createdAt: Date,
 });
 
 module.exports = mongoose.model('BookingInfo', bookingSchema, 'bookingInfo');
