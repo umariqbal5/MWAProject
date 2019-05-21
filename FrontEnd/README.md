@@ -83,7 +83,7 @@ argon-dashboard-angular
 │   │   │   └── user-profile
 │   │   │       ├── user-profile.component.html
 │   │   │       ├── user-profile.component.scss
-│   │   │       ├── user-profile.component.spec.ts
+│   │   │       ├── book-a-package.component.spec.ts
 │   │   │       └── book-a-package.component.ts
 │   │   └── variables
 │   │       └── charts.ts

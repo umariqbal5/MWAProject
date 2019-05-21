@@ -10,8 +10,8 @@ const shortid = require('shortid');
 // find all bookings for all users
 router.get('/api/all-bookings', async (req, res) => {
     try {
-        let result = await BookingInfo.find();
-        res.status(200).json({success: 1, msg:'', data: result});
+        let result = await BookingInfo.find({bookingStatus: {$ne: 'DELETED'}});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
     }
@@ -22,8 +22,8 @@ router.get('/api/user-bookings', async (req, res) => {
     try {
         console.log('headers', req.user.userID);
         let userId = mongoose.Types.ObjectId(req.user.userID);
-        let result = await BookingInfo.find({'user._id': userId});
-        res.status(200).json({success: 1, msg:'', data: result});
+        let result = await BookingInfo.find({'user._id': userId, bookingStatus: {$ne: 'DELETED'}});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
     }
@@ -34,7 +34,7 @@ router.get('/api/booking/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await BookingInfo.findOne({'bookingRef': pnr});
-        res.status(200).json({success: 1, msg:'', data: result});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
     }
@@ -51,7 +51,7 @@ router.post('/api/booking', async (req, res) => {
         let bookingInfo = new BookingInfo(booking);
 
         let result = await bookingInfo.save();
-        res.status(200).json({success: 1, msg:'', data: result});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         console.log(e);
         res.status(400).send(e);
@@ -68,7 +68,7 @@ router.get('/api/booking/cancel/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await updateBookingStatus(pnr, 'CANCELLED');
-        res.status(200).json({success: 1, msg:'', data: result});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
     }
@@ -79,7 +79,7 @@ router.get('/api/booking/delete/:pnr', async (req, res) => {
     try {
         let pnr = req.params.pnr;
         let result = await updateBookingStatus(pnr, 'DELETED');
-        res.status(200).json({success: 1, msg:'', data: result});
+        res.status(200).json({success: 1, msg: '', data: result});
     } catch (e) {
         res.status(400).send(e);
     }

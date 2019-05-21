@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BookingService} from '../../../services/booking.service';
 import {ActivatedRoute} from '@angular/router';
+import {BookingModel} from '../../../models/booking.model';
 
 @Component({
   selector: 'app-admin-view-bookings',
@@ -9,21 +10,25 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AdminViewBookingsComponent implements OnInit {
 
-  constructor(private bookingService: BookingService, private route: ActivatedRoute) { }
+  constructor(private bookingService: BookingService, private route: ActivatedRoute) {
+  }
 
-  bookingList: any = [];
+  bookingList: Array<BookingModel> = [];
+  pnr: any;
+
   ngOnInit() {
+    this.route.params.subscribe(params => this.pnr = params.pnr);
     this.bookingService.getAllBookings().subscribe((resutl: any) => {
       this.bookingList = resutl.data;
       console.log('bookingList ', this.bookingList);
-    } );
+    });
   }
 
   cancelBooking() {
-    this.bookingService.cancelBooking(this.route.params['pnr']);
+    this.bookingService.cancelBooking(this.pnr);
   }
 
   deleteBooking() {
-    this.bookingService.deleteBooking(this.route.params['pnr']);
+    this.bookingService.deleteBooking(this.pnr);
   }
 }

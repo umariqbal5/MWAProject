@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BookingService} from '../../../services/booking.service';
 import {ActivatedRoute} from '@angular/router';
+import {BookingModel} from '../../../models/booking.model';
 
 @Component({
   selector: 'app-auth-view-bookings',
@@ -9,16 +10,18 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AuthViewBookingsComponent implements OnInit {
 
-  constructor(private bookingService: BookingService, private route: ActivatedRoute) { }
+  constructor(private bookingService: BookingService, private route: ActivatedRoute) {
+  }
 
-  bookingList: any = [];
+  bookingList: Array<BookingModel> = [];
+  pnr: any;
+
   ngOnInit() {
     // Get auth user
     this.bookingService.getAllBookingsByUser().subscribe((result: any) => {
       this.bookingList = result.data;
       console.log('getAllBookingsByUser: ', this.bookingList);
     });
-
 
     // Create a booking
     // const newBooking = {
@@ -50,4 +53,11 @@ export class AuthViewBookingsComponent implements OnInit {
     // });
   }
 
+  // Cancel booking
+  cancelBooking() {
+    this.route.params.subscribe(params => this.pnr = params.pnr);
+    this.bookingService.cancelBooking(this.pnr).subscribe(data => {
+      console.log('cancelBooking: ', data);
+    });
+  }
 }

@@ -17,7 +17,7 @@ export const AuthLayoutRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'user-profile', component: UserProfileComponent, canActivate: [ClientAuthGuard]},
-  {path: 'booking-details', component: BookingDetailsComponent, canActivate: [ClientAuthGuard]},
+  {path: 'booking-details/:pnr', component: BookingDetailsComponent, canActivate: [ClientAuthGuard]},
   {path: 'auth-view-bookings', component: AuthViewBookingsComponent, canActivate: [ClientAuthGuard]},
   {path: 'error', component: ErrorComponent},
   {path: 'book-a-package', component: BookAPackageComponent, canActivate: [ClientAuthGuard]}
