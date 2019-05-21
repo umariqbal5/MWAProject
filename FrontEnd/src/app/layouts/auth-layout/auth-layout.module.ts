@@ -12,6 +12,8 @@ import {UserProfileComponent} from '../../pages/user-profile/user-profile.compon
 import {BookingDetailsComponent} from '../../pages/booking/booking-details/booking-details.component';
 import {AuthViewBookingsComponent} from '../../pages/booking/auth-view-bookings/auth-view-bookings.component';
 import {BookAPackageComponent} from '../../pages/booking/book-a-package/book-a-package.component';
+import {ErrorComponent} from '../../pages/error/error.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import {BookAPackageComponent} from '../../pages/booking/book-a-package/book-a-p
     UserProfileComponent,
     BookingDetailsComponent,
     AuthViewBookingsComponent,
+    ErrorComponent,
     BookAPackageComponent
   ]
 })

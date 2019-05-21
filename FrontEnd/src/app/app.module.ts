@@ -17,6 +17,7 @@ import {BookingService} from './services/booking.service';
 import {JwtModule} from '@auth0/angular-jwt';
 import {AuthGuard} from './gaurds/auth.guard';
 import {AuthService} from './services/auth.service';
+import {ClientAuthGuard} from './gaurds/client-auth.guard';
 // import { SearchPipe } from './search.pipe';
 // import { SortPipe } from './pipes/sort.pipe';
 
@@ -54,7 +55,8 @@ export function tokenGetter() {
   providers: [
     AuthService,
     AuthGuard,
-    BookingService
+    BookingService,
+    ClientAuthGuard
   ],
   bootstrap: [AppComponent]
 })
