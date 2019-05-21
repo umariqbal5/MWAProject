@@ -10,8 +10,7 @@ export interface User{
         state:String;
         city:String;
         zipcode:String;
-    }
-    
+    };
     role:String;
 
 }
@@ -21,4 +20,3 @@ let goodResponse = [];
 for(let a of goodResponse){
     goodResponse.push(goodResponse[a]);
 }
-    

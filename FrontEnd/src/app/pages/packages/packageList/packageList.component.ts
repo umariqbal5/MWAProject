@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PackageService } from '../../services/package.service';
-import { PackageModel } from '../../models/package.model';
+import { PackageService } from '../../../services/package.service';
+import { PackageModel } from '../../../models/package.model';
 @Component({
   selector: 'app-tables',
   templateUrl: './packageList.component.html',

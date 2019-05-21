@@ -13,7 +13,7 @@ describe('PackageDetailComponent', () => {
 =======
 import { CreateUserComponent } from './CreateUser.component';
 
-describe('CreatePackageComponent', () => {
+describe('CreateUserComponent', () => {
   let component: CreateUserComponent;
   let fixture: ComponentFixture<CreateUserComponent>;
 

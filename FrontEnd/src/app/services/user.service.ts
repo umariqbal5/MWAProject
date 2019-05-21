@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getUserById(id){
-    return this.http.get(`${this.uri}/users/api/${id}`);
+      return this.http.get(`${this.uri}/users/api/${id}`);
   }
 
   addUser(first_name,last_name,email,phone_number,username,password,state,city,zipcode){
