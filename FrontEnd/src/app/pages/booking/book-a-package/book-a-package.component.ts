@@ -17,6 +17,7 @@ export class BookAPackageComponent implements OnInit {
   packageName = '';
   bookingForm: FormGroup;
   submitted = false;
+  arrayItems: FormArray;
 
   constructor(private bookingServices: BookingService, private formBuilder: FormBuilder,
               private packageService: PackageService, private route: ActivatedRoute, private router: Router) {
@@ -34,11 +35,12 @@ export class BookAPackageComponent implements OnInit {
   addTravallerFormGroup(): FormGroup {
     return this.formBuilder.group({
       name: ['', Validators.required],
-      phone: ['', Validators.required]
+      phone: ''
     });
   }
 
   ngOnInit() {
+    this.arrayItems = <FormArray>this.bookingForm.get('travelers');
     this.route.params.subscribe(params => this.packageName = params['name']);
     this.packageService.getPackageByName(this.packageName).subscribe((data) => {
       this.packageInfo = data[0];
@@ -47,7 +49,13 @@ export class BookAPackageComponent implements OnInit {
   }
 
   addATraveller() {
-    (<FormArray>this.bookingForm.get('travelers')).push(this.addTravallerFormGroup());
+    this.arrayItems.push(this.addTravallerFormGroup());
+  }
+
+  removeATraveller() {
+    if (this.arrayItems.length !== 1) {
+      this.arrayItems.removeAt(this.arrayItems.length - 1);
+    }
   }
 
   buildBookingData(formValue, packageData, totalPrice): any {

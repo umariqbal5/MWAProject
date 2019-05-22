@@ -118,4 +118,18 @@ router.get('/api/count-bookings', async (req, res) => {
     }
 })
 
+// Filter booking by departureDate or booking date (createdAt) for admin
+router.get('/api/filter/:start/:end/:type', async (req, res) => {
+    try {
+        const start = req.params.start;
+        const end = req.params.end;
+        const type = req.params.type;
+        let result = await BookingInfo.find({type: {$range: [start, end]}});
+        res.status(200).json({success: 1, msg: '', data: result});
+    } catch (e) {
+        res.status(400).send(e);
+    }
+})
+
+
 module.exports = router;
