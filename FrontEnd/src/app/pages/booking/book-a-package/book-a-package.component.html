@@ -103,6 +103,7 @@
             <div class="pl-lg-4">
               <div class="col-12 text-right">
                 <button type="button" (click)="addATraveller()" class="btn btn-info">Add A Traveller</button>
+                <button type="button" (click)="removeATraveller()" class="btn btn-info">Remove A Traveller</button>
               </div>
               <div class="row" formArrayName="travelers"
                    *ngFor="let travel of bookingForm.get('travelers').controls let i = index">
