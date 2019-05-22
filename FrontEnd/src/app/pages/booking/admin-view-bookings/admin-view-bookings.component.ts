@@ -15,6 +15,10 @@ export class AdminViewBookingsComponent implements OnInit {
 
   bookingList: Array<BookingModel> = [];
   p = 1;
+  start: Date;
+  end: Date;
+  type: string;
+
 
   ngOnInit() {
     this.refresh();
@@ -34,5 +38,9 @@ export class AdminViewBookingsComponent implements OnInit {
       this.changeDetectorRefs.detectChanges();
       console.log('bookingList ', this.bookingList);
     });
+  }
+
+  getBookingFilterByDate() {
+    this.bookingService.getBookingsFilteredByDate(this.start, this.end, this.type);
   }
 }
