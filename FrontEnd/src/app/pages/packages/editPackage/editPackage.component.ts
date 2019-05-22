@@ -13,6 +13,9 @@ export class EditPackageComponent implements OnInit {
   id:String;
   pkg:any={};
   updateForm: FormGroup;
+  selectedFile: File;
+  fileChange = false;
+  imagePath = '';
 
   constructor(private packageService: PackageService,
               private router:Router,
@@ -30,6 +33,7 @@ export class EditPackageComponent implements OnInit {
             this.updateForm.get('name').setValue(this.pkg.package.name);
             this.updateForm.get('type').setValue(this.pkg.package.package_type);
             this.updateForm.get('description').setValue(this.pkg.package.description);
+            this.imagePath = this.pkg.package.image_url;
             this.updateForm.get('image_url').setValue(this.pkg.package.image_url);
             this.updateForm.get('destination').setValue(this.pkg.destination);
             this.updateForm.get('hotel').setValue(this.pkg.hotel);
@@ -60,5 +64,11 @@ export class EditPackageComponent implements OnInit {
       hotel: [''],
       price: ['', Validators.required]
     });
+  }
+
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+    this.fileChange = true;
+    this.imagePath= `assets/img/places/${event.target.files[0].name}`;
   }
 }

@@ -29,6 +29,7 @@ const port = 4000;
  */
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 app.use(expressJwt({secret: db_url.secrete}).unless({path: ['/api/auth/login','/api/auth/register','/api/package']}));
 

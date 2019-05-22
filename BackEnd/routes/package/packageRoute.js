@@ -2,9 +2,12 @@ const express = require('express');
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
+const multipart = require('connect-multiparty');
 
 const package = require('../../models/packages/packageSchema');
 const router = express.Router();
+//const multipartMiddleware = multipart({ uploadDir: './../../FrontEnd/src/assets/img/places'});
+//const multipartMiddleware = multipart({ uploadDir: `${__dirname}/../../../FrontEnd/src/assets/img/places`});
 
 
 router.get('/', ( req, res ) => {
@@ -99,6 +102,12 @@ router.post('/add', ( req, res ) => {
                 'message': 'Error occurred while inserting package.'});
         })
 })
+
+
+// router.post('/addImage', multipartMiddleware, ( req, res ) => {
+//
+//     console.log('image hopefully uploaded');
+// })
 
 
 router.put('/update/name/:name', ( req, res ) => {

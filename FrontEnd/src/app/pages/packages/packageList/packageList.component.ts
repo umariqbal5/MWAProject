@@ -25,8 +25,6 @@ export class PackageListComponent implements OnInit {
       .getPackages()
       .subscribe((data: PackageModel[]) => {
         this.packages = data;
-        console.log('Data requested ...');
-        console.log(this.packages);
     });
   }
 
