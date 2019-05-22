@@ -47,6 +47,10 @@ export class PackageService {
     return this.http.post(`${this.uri}/package/add`, pkg);
   }
 
+  addImage(formData) {
+    return this.http.post(`${this.uri}/package/addImage`, formData);
+  }
+
   updatePackageByName(name, type, image_url, description, destination, hotel, price) {
     const pkg = {
       package: {

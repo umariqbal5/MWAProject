@@ -12,6 +12,8 @@ export class CreatePackageComponent implements OnInit {
 
   createForm:FormGroup;
   selectedFile: File;
+  fileChange = false;
+  imagePath = '';
 
   constructor(private packageService:PackageService, private router:Router, private fb:FormBuilder) {}
 
@@ -26,6 +28,18 @@ export class CreatePackageComponent implements OnInit {
          .subscribe(()=> {
         this.router.navigate(['/packages']);
      });
+
+     // if(this.fileChange) {
+     //   const formData = new FormData();
+     //   formData.append('image', this.selectedFile, name);
+     //   console.dir('inside file is changed ');
+     //   console.dir(formData.getAll('image'));
+     //   this.packageService
+     //     .addImage(formData)
+     //     .subscribe(() => {
+     //       console.log('image upload resolved');
+     //     });
+     // }
    }
 
   ngOnInit() {
@@ -47,5 +61,7 @@ export class CreatePackageComponent implements OnInit {
 
   onFileChanged(event) {
     this.selectedFile = event.target.files[0];
+    this.fileChange = true;
+    this.imagePath= `assets/img/places/${event.target.files[0].name}`;
   }
 }

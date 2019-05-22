@@ -18,7 +18,7 @@ import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
 import {PackageListComponent} from '../../pages/packages/packageList/packageList.component';
 import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
 import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+//import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -30,8 +30,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NgbModule,
     ClipboardModule,
     ReactiveFormsModule,
-    NgxPaginationModule,
-    Ng2SearchPipeModule
+    NgxPaginationModule
+    //Ng2SearchPipeModule
 
   ],
   declarations: [
