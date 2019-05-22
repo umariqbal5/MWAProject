@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32d9f5d6-7b94-4993-9557-05c5c8166561" name="Default Changelist" comment="update api when code seperate booking schema with user">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,14 +16,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="1830">
               <caret line="122" column="80" selection-start-line="122" selection-start-column="80" selection-end-line="122" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/users/createUser/CreateUser.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/dashboard/dashboard.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -113,7 +141,6 @@
         <option value="$PROJECT_DIR$/FrontEnd/src/app/layouts/admin-layout/admin-layout.module.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/layouts/auth-layout/auth-layout.module.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.ts" />
-        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html" />
         <option value="$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js" />
         <option value="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" />
@@ -122,6 +149,8 @@
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/booking-details/booking-details.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/dashboard/dashboard.component.html" />
       </list>
     </option>
   </component>
@@ -190,8 +219,35 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-              <item name="book-a-package" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="createUser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,21 +308,22 @@
       <workItem from="1558381393468" duration="30582000" />
       <workItem from="1558475948804" duration="8275000" />
       <workItem from="1558530379152" duration="2113000" />
-      <workItem from="1558533142327" duration="2294000" />
+      <workItem from="1558533142327" duration="3730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146393000" />
+    <option name="totallyTimeSpent" value="147829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1328" height="815" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.63658535" visible="true" weight="0.19357307" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.63658535" visible="true" weight="0.19357307" />
       <window_info id="Structure" order="2" sideWeight="0.36341465" side_tool="true" weight="0.27841726" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49928057" visible="true" weight="0.4550484" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49928057" visible="true" weight="0.4550484" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5007194" side_tool="true" weight="0.25829726" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49950933" weight="0.3264177" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32921812" />
@@ -291,16 +348,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update api when code seperate booking schema with user" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/components/components.module.spec.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/components/sidebar/sidebar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="94" column="46" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/layouts/admin-layout/admin-layout.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -532,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="168" column="14" lean-forward="true" selection-start-line="168" selection-start-column="14" selection-end-line="168" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/layouts/auth-layout/auth-layout.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -688,11 +725,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="1830">
           <caret line="122" column="80" selection-start-line="122" selection-start-column="80" selection-end-line="122" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/users/createUser/CreateUser.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/dashboard/dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
         </state>
       </provider>
     </entry>
