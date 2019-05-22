@@ -57,9 +57,9 @@
                     <label class="form-control-label" for="input-pkgdete">Departure Date</label>
                     <input type="date" id="input-pkgdete" class="form-control form-control-alternative"
                            formControlName="departureDate"
-                           [ngClass]="{ 'is-invalid': submitted && bookingForm.departureDate.errors }"/>
-                    <div *ngIf="submitted && bookingForm.departureDate.errors" class="invalid-feedback">
-                      <div *ngIf="bookingForm.departureDate.errors.required">Departure Date is required</div>
+                           [ngClass]="{ 'is-invalid': submitted && f.departureDate.errors }"/>
+                    <div *ngIf="submitted && f.departureDate.errors" class="invalid-feedback">
+                      <div *ngIf="f.departureDate.errors.required">Departure Date is required</div>
                     </div>
                   </div>
                 </div>
@@ -72,9 +72,9 @@
                   <label class="form-control-label" for="input-duration">Trip duration (days)</label>
                   <input type="number" id="input-duration" class="form-control form-control-alternative"
                          formControlName="duration"
-                         [ngClass]="{ 'is-invalid': submitted && bookingForm.duration.errors }"/>
-                  <div *ngIf="submitted && bookingForm.duration.errors" class="invalid-feedback">
-                    <div *ngIf="bookingForm.duration.errors.required">Trip duration is required</div>
+                         [ngClass]="{ 'is-invalid': submitted && f.duration.errors }"/>
+                  <div *ngIf="submitted && f.duration.errors" class="invalid-feedback">
+                    <div *ngIf="f.duration.errors.required">Trip duration is required</div>
                   </div>
                 </div>
               </div>
@@ -83,9 +83,9 @@
                   <label class="form-control-label" for="input-adult">Number of Adult</label>
                   <input type="number" id="input-adult" class="form-control form-control-alternative"
                          formControlName="no_adult"
-                         [ngClass]="{ 'is-invalid': submitted && bookingForm.no_adult.errors }"/>
-                  <div *ngIf="submitted && bookingForm.no_adult.errors" class="invalid-feedback">
-                    <div *ngIf="bookingForm.no_adult.errors.required">No of adult is required</div>
+                         [ngClass]="{ 'is-invalid': submitted && f.no_adult.errors }"/>
+                  <div *ngIf="submitted && f.no_adult.errors" class="invalid-feedback">
+                    <div *ngIf="f.no_adult.errors.required">No of adult is required</div>
                   </div>
                 </div>
               </div>
@@ -113,22 +113,14 @@
                     <div class="form-group">
                       <label class="form-control-label" for="input-full-name">Fulll Name</label>
                       <input type="text" id="input-full-name" class="form-control form-control-alternative"
-                             placeholder="Full name" formControlName="name"
-                             [ngClass]="{ 'is-invalid': submitted && bookingForm.name.errors }"/>
-                      <div *ngIf="submitted && bookingForm.name.errors" class="invalid-feedback">
-                        <div *ngIf="bookingForm.name.errors.required">Guest name is required</div>
-                      </div>
+                             placeholder="Full name" formControlName="name">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-phone-number">Phone</label>
                       <input type="text" id="input-phone-number" class="form-control form-control-alternative"
-                             placeholder="Phone number" formControlName="phone"
-                             [ngClass]="{ 'is-invalid': submitted && bookingForm.phone.errors }"/>
-                      <div *ngIf="submitted && bookingForm.phone.errors" class="invalid-feedback">
-                        <div *ngIf="bookingForm.phone.errors.required">Phone is required</div>
-                      </div>
+                             placeholder="Phone number" formControlName="phone">
                     </div>
                   </div>
                 </div>

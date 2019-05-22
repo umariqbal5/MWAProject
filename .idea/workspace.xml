@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32d9f5d6-7b94-4993-9557-05c5c8166561" name="Default Changelist" comment="update api when code seperate booking schema with user">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,21 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="121" column="24" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="59" column="104" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
+            <state relative-caret-position="196">
+              <caret line="122" column="80" selection-start-line="122" selection-start-column="80" selection-end-line="122" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -51,88 +33,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+            <state relative-caret-position="62">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/gaurds/auth.guard.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/gaurds/client-auth.guard.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="1" selection-start-line="16" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/layouts/admin-layout/admin-layout.routing.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,14 +114,14 @@
         <option value="$PROJECT_DIR$/FrontEnd/src/app/layouts/auth-layout/auth-layout.module.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/auth-view-bookings/auth-view-bookings.component.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/booking-details/booking-details.component.html" />
         <option value="$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js" />
         <option value="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" />
-        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/booking-details/booking-details.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" />
       </list>
     </option>
   </component>
@@ -232,118 +136,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="middlewares" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="auth-layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
@@ -351,28 +184,8 @@
               <item name="booking" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-view-bookings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-              <item name="auth-view-bookings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="MWAProject_Latest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject_Latest" type="462c0819:PsiDirectoryNode" />
               <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
@@ -380,65 +193,11 @@
               <item name="booking" type="462c0819:PsiDirectoryNode" />
               <item name="book-a-package" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="booking" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-details" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="packageList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="userList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,28 +251,29 @@
       <workItem from="1558211817148" duration="71492000" />
       <workItem from="1558381393468" duration="30582000" />
       <workItem from="1558475948804" duration="8275000" />
+      <workItem from="1558530379152" duration="2113000" />
+      <workItem from="1558533142327" duration="2294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141986000" />
+    <option name="totallyTimeSpent" value="146393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1328" height="815" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.63658535" visible="true" weight="0.19357307" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.63658535" visible="true" weight="0.19357307" />
       <window_info id="Structure" order="2" sideWeight="0.36341465" side_tool="true" weight="0.27841726" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49928057" visible="true" weight="0.4439834" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49928057" visible="true" weight="0.4550484" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5007194" side_tool="true" weight="0.25829726" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49950933" weight="0.32756132" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49950933" weight="0.3264177" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32921812" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="TypeScript" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32756132" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.35209236" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.35131398" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -686,13 +446,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/node_modules/bootstrap/scss/_progress.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/node_modules/bootstrap/scss/_progress.scss" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/models/package.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -798,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/booking-details/booking-details.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackEnd/routes/auth/authRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -835,13 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/models/db_url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/models/db_url.js" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/layouts/auth-layout/auth-layout.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -863,6 +601,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="121" column="24" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -896,47 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js">
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="121" column="24" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="59" column="104" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="11">
+          <caret line="116" column="58" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -947,12 +655,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html">
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+        <state relative-caret-position="194">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/booking-details/booking-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="122" column="80" selection-start-line="122" selection-start-column="80" selection-end-line="122" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

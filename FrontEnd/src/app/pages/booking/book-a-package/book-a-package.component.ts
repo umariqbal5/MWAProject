@@ -39,6 +39,8 @@ export class BookAPackageComponent implements OnInit {
     });
   }
 
+  get f() { return this.bookingForm.controls; }
+
   ngOnInit() {
     this.arrayItems = <FormArray>this.bookingForm.get('travelers');
     this.route.params.subscribe(params => this.packageName = params['name']);
