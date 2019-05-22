@@ -2,9 +2,11 @@ const express = require('express');
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
+const multipart = require('connect-multiparty');
 
 const package = require('../../models/packages/packageSchema');
 const router = express.Router();
+const multipartMiddleware = multipart({ uploadDir: './../../../FrontEnd/src/assets/img/places'});
 
 
 router.get('/', ( req, res ) => {
@@ -87,7 +89,7 @@ router.get('/destination/:destination', ( req, res ) => {
 })
 
 
-router.post('/add', ( req, res ) => {
+router.post('/add', multipartMiddleware, ( req, res ) => {
 
     let pk = new package(req.body);
     pk.save()

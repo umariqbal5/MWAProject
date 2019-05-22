@@ -11,6 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class CreatePackageComponent implements OnInit {
 
   createForm:FormGroup;
+  selectedFile: File;
 
   constructor(private packageService:PackageService, private router:Router, private fb:FormBuilder) {}
 
@@ -45,6 +46,6 @@ export class CreatePackageComponent implements OnInit {
   }
 
   onFileChanged(event) {
-    const file = event.target.files[0];
+    this.selectedFile = event.target.files[0];
   }
 }
