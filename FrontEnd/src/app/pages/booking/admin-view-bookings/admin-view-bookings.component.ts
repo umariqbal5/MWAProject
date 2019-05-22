@@ -42,5 +42,6 @@ export class AdminViewBookingsComponent implements OnInit {
 
   getBookingFilterByDate() {
     this.bookingService.getBookingsFilteredByDate(this.start, this.end, this.type);
+    this.changeDetectorRefs.detectChanges();
   }
 }

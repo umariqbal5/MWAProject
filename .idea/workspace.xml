@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32d9f5d6-7b94-4993-9557-05c5c8166561" name="Default Changelist" comment="update api when code seperate booking schema with user">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/confirmation-dialog/confirmation-dialog.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/packages/packageList/packageList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="59" column="104" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
+              <caret line="59" column="104" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -84,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+            <state relative-caret-position="302">
+              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -93,22 +82,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+            <state relative-caret-position="274">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/gaurds/auth.guard.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,8 +142,8 @@
       <find>package</find>
       <find>ngFor</find>
       <find>Add</find>
-      <find>All</find>
       <find>data</find>
+      <find>All</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,9 +191,9 @@
         <option value="$PROJECT_DIR$/BackEnd/models/booking/bookingSchema.js" />
         <option value="$PROJECT_DIR$/BackEnd/routes/booking/bookingRoute.js" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts" />
-        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html" />
       </list>
     </option>
@@ -425,6 +402,16 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="createUser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MWAProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MWAProject" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
               <item name="userList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -491,12 +478,12 @@
       <updated>1558211815629</updated>
       <workItem from="1558211817148" duration="71492000" />
       <workItem from="1558381393468" duration="30582000" />
-      <workItem from="1558475948804" duration="8275000" />
+      <workItem from="1558475948804" duration="11326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141986000" />
+    <option name="totallyTimeSpent" value="145037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1328" height="815" extended-state="0" />
@@ -734,11 +721,6 @@
         <state relative-caret-position="-2421" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/users/userList/UserList.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3095" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/users/userList/UserList.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -910,16 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -933,24 +905,41 @@
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/book-a-package/book-a-package.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="59" column="104" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
+          <caret line="59" column="104" selection-start-line="57" selection-start-column="20" selection-end-line="59" selection-end-column="104" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/services/booking.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/users/userList/UserList.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1826">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="302">
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/src/app/pages/booking/admin-view-bookings/admin-view-bookings.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+        <state relative-caret-position="274">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
           </folding>
