@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PackageService } from '../../services/package.service';
-import { PackageModel } from '../../models/package.model';
+import { PackageService } from '../../../services/package.service';
+import { PackageModel } from '../../../models/package.model';
+import { ConfirmationDialogService } from '../../../components/confirmation-dialog/confirmation-dialog.service';
+
 @Component({
   selector: 'app-tables',
   templateUrl: './packageList.component.html',
@@ -11,7 +13,9 @@ export class PackageListComponent implements OnInit {
 
   packages: PackageModel[];
 
-  constructor(private packageService:PackageService, private router:Router) { }
+  constructor(private packageService:PackageService,
+              private confirmService: ConfirmationDialogService,
+              private router:Router) { }
 
   ngOnInit() {
     this.fetchPackages();
@@ -27,7 +31,7 @@ export class PackageListComponent implements OnInit {
   }
 
   editPackageById(id) {
-    this.router.navigate([`/update/${id}`]);
+    this.router.navigate([`/editPackage/`+id]);
   }
 
   deletePackageById(id) {
@@ -42,9 +46,21 @@ export class PackageListComponent implements OnInit {
   deletePackageByName(name) {
     console.log('inside delete component name ');
     this.packageService
-      .deletePackageByName(name)
-      .subscribe(() => {
-        this.fetchPackages();
-      });
+        .deletePackageByName(name)
+        .subscribe(() => {
+            this.fetchPackages();
+          });
+  }
+
+  confirmDelete(name) {
+    this.confirmService
+      .confirm('Please confirm ... ',
+        `Do you really want to delete ${name} package?`)
+      .then((confirmed) => {
+        if(confirmed) {
+         this.deletePackageByName(name);
+        }
+      })
+      .catch();
   }
 }

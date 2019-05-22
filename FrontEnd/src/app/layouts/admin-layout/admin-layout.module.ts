@@ -15,7 +15,10 @@ import {UserListComponent} from '../../pages/users/userList/UserList.component';
 import {CreateUserComponent} from '../../pages/users/createUser/CreateUser.component';
 import {AdminViewBookingsComponent} from '../../pages/booking/admin-view-bookings/admin-view-bookings.component';
 import {EditUserComponent} from '../../pages/users/editUser/editUser.component';
-import {PackageListComponent} from '../../pages/packageList/packageList.component';
+import {PackageListComponent} from '../../pages/packages/packageList/packageList.component';
+import {CreatePackageComponent} from '../../pages/packages/createPackage/createPackage.component';
+import {EditPackageComponent} from '../../pages/packages/editPackage/editPackage.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -27,7 +30,8 @@ import {PackageListComponent} from '../../pages/packageList/packageList.componen
     HttpClientModule,
     NgbModule,
     ClipboardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   declarations: [
     DashboardComponent,
@@ -36,7 +40,9 @@ import {PackageListComponent} from '../../pages/packageList/packageList.componen
     UserListComponent,
     CreateUserComponent,
     AdminViewBookingsComponent,
-    PackageListComponent
+    PackageListComponent,
+    CreatePackageComponent,
+    EditPackageComponent
   ]
 })
 
