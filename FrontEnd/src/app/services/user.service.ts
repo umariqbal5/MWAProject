@@ -64,6 +64,7 @@ export class UserService {
     const count = this.getUsers();
     count.subscribe( (data:User[]) => {
       this.users = data;
+      console.log('users',this.users);
       return this.users.length;
     });
   }
