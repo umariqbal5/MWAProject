@@ -37,9 +37,14 @@ export class CreatePackageComponent implements OnInit {
       type: [''],
       description: [''],
       image_url: [''],
+      image_file: [''],
       destination: [''],
       hotel: [''],
       price: ['', Validators.required]
     });
+  }
+
+  onFileChanged(event) {
+    const file = event.target.files[0];
   }
 }

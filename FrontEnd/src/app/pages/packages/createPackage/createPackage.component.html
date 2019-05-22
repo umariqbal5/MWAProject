@@ -53,6 +53,8 @@
                   <div class="form-group">
                     <label class="form-control-label" for="input-first-name">Image Url</label>
                     <input type="text" id="input-first-name" class="form-control form-control-alternative" formControlName="image_url" placeholder="image_url" #image_url>
+                    <input id="input-file-image" class="form-control form-control-alternative" formControlName="image_file" style="display: none" type="file" (change)="onFileChanged($event)" #imageFile>
+                    <button class="btn btn-info" (click)="imageFile.click()">Select File</button>
                   </div>
                 </div>
               </div>
